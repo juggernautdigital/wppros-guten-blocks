@@ -1,0 +1,289 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project. HELLOWORLD
+*/
+/**
+ * #.# Insurance Products Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-wpproz-insurance-product {
+  position: relative;
+  /*
+     ** Alternate Section
+     */ }
+  .wp-block-wpproz-insurance-product:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    background: -o-linear-gradient(315deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); }
+  .wp-block-wpproz-insurance-product .photo-credit {
+    display: none;
+    position: absolute;
+    top: 9rem;
+    right: 0;
+    padding: 15px 50px 15px 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: right; }
+    @media (min-width: 783px) {
+      .wp-block-wpproz-insurance-product .photo-credit {
+        display: block; } }
+    .wp-block-wpproz-insurance-product .photo-credit span {
+      display: block;
+      color: #fff;
+      font-size: 12px; }
+      .wp-block-wpproz-insurance-product .photo-credit span:first-child {
+        font-weight: 700; }
+  .wp-block-wpproz-insurance-product .panel {
+    position: relative;
+    width: 100%;
+    background-color: #3e87d2;
+    text-align: center; }
+    @media (min-width: 783px) {
+      .wp-block-wpproz-insurance-product .panel {
+        width: 50%; } }
+    .wp-block-wpproz-insurance-product .panel .inner-panel {
+      padding: 60px 30px 0; }
+      @media (min-width: 783px) {
+        .wp-block-wpproz-insurance-product .panel .inner-panel {
+          padding: 60px 45px; } }
+      .wp-block-wpproz-insurance-product .panel .inner-panel img {
+        width: 45%;
+        height: auto; }
+      .wp-block-wpproz-insurance-product .panel .inner-panel h3 {
+        color: #fff; }
+      .wp-block-wpproz-insurance-product .panel .inner-panel p {
+        margin-bottom: 30px; }
+      .wp-block-wpproz-insurance-product .panel .inner-panel a {
+        background-color: #fff;
+        border-radius: 50px;
+        padding: 15px 25px;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase; }
+    .wp-block-wpproz-insurance-product .panel .panel-bullets {
+      position: relative;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      text-align: left;
+      padding: 0 !important; }
+      @media (min-width: 783px) {
+        .wp-block-wpproz-insurance-product .panel .panel-bullets {
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translate(100%, -50%) !important;
+          -ms-transform: translate(100%, -50%) !important;
+          transform: translate(100%, -50%) !important; } }
+      .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0.7;
+        padding: 0 !important; }
+      .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content {
+        position: relative;
+        z-index: 2;
+        padding: 30px; }
+        @media (min-width: 783px) {
+          .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content {
+            padding: 45px; } }
+        .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content ul {
+          margin: 0 !important;
+          padding: 0 !important; }
+          .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content ul li {
+            color: #fff;
+            margin-bottom: 10px;
+            list-style: none; }
+            .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content ul li:before {
+              content: '\f054';
+              font-family: 'Font Awesome 5 Pro';
+              font-weight: 400;
+              margin-right: 7px; }
+      .wp-block-wpproz-insurance-product .panel .panel-bullets .find-out-more {
+        position: relative;
+        z-index: 2;
+        padding: 0 30px 30px; }
+        @media (min-width: 783px) {
+          .wp-block-wpproz-insurance-product .panel .panel-bullets .find-out-more {
+            padding: 0 45px 45px; } }
+        .wp-block-wpproz-insurance-product .panel .panel-bullets .find-out-more a {
+          color: #fff;
+          font-weight: 400; }
+  .wp-block-wpproz-insurance-product .quote {
+    display: none;
+    position: absolute;
+    bottom: 9rem;
+    right: 0;
+    width: 300px;
+    text-align: right;
+    color: #fff;
+    font-weight: 400; }
+    @media (min-width: 783px) {
+      .wp-block-wpproz-insurance-product .quote {
+        display: block; } }
+    .wp-block-wpproz-insurance-product .quote span {
+      display: block;
+      width: 100%; }
+  .wp-block-wpproz-insurance-product.content-right .photo-credit {
+    right: auto !important;
+    left: 0 !important;
+    padding: 15px 25px 15px 50px !important;
+    text-align: left !important; }
+  @media (min-width: 783px) {
+    .wp-block-wpproz-insurance-product.content-right .panel {
+      right: -50% !important; }
+      .wp-block-wpproz-insurance-product.content-right .panel .panel-bullets {
+        -webkit-transform: translate(-100%, -50%) !important;
+        -ms-transform: translate(-100%, -50%) !important;
+        transform: translate(-100%, -50%) !important; } }
+  .wp-block-wpproz-insurance-product.content-right .quote {
+    right: auto !important;
+    left: 0 !important;
+    text-align: left !important; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project. HELLOWORLD
+*/
+/**
+ * #.# Information Boxes Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-wpproz-information-boxes h2 {
+  margin-bottom: 15px; }
+
+.wp-block-wpproz-information-boxes p {
+  margin: 0; }
+
+.wp-block-wpproz-information-boxes .btn {
+  background-color: #d51e41;
+  padding: 15px 40px;
+  border-radius: 50px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  font-weight: 700; }
+
+.wp-block-wpproz-information-boxes .outline-box {
+  border-radius: 0 40px 0 0;
+  border: 1px solid #d51e41;
+  padding: 30px; }
+  .wp-block-wpproz-information-boxes .outline-box h2, .wp-block-wpproz-information-boxes .outline-box h3, .wp-block-wpproz-information-boxes .outline-box h4 {
+    margin-top: 0;
+    font-weight: 700; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project. HELLOWORLD
+*/
+/**
+ * #.# Carousel Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-wpproz-carousel ul.slick-carousel {
+  margin: 0; }
+  .wp-block-wpproz-carousel ul.slick-carousel .slick-next,
+  .wp-block-wpproz-carousel ul.slick-carousel .slick-prev {
+    top: 212px;
+    -webkit-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    display: none !important; }
+  .wp-block-wpproz-carousel ul.slick-carousel li {
+    padding: 0 10px;
+    list-style: none; }
+    .wp-block-wpproz-carousel ul.slick-carousel li .slide-item {
+      position: relative;
+      padding: 30px 30px 70px; }
+      .wp-block-wpproz-carousel ul.slick-carousel li .slide-item h2 {
+        color: #fff;
+        font-size: 26px;
+        margin-top: 0; }
+      .wp-block-wpproz-carousel ul.slick-carousel li .slide-item p {
+        color: #fff; }
+      .wp-block-wpproz-carousel ul.slick-carousel li .slide-item .button-group {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px; }
+        .wp-block-wpproz-carousel ul.slick-carousel li .slide-item .button-group a {
+          color: #fff;
+          padding: 15px 20px; }
+        .wp-block-wpproz-carousel ul.slick-carousel li .slide-item .button-group a.get-quote {
+          background-color: #fff;
+          border-radius: 50px;
+          color: #444444;
+          text-transform: uppercase;
+          font-weight: 700; }
+
+.wp-block-wpproz-carousel .slick-arrow {
+  border: 1px solid #fff; }
+
+.wp-block-wpproz-carousel .slick-arrow:before {
+  color: #fff; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project. HELLOWORLD
+*/
+/**
+ * #.# Call to Action Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-group.button-group-center .wp-block-button {
+  display: inline-block;
+  margin: 0 10px; }
+
+.wp-block-group.button-group-center .wp-block-button:first-child {
+  margin-left: 0; }
+
+.wp-block-group.button-group-center .wp-block-button:last-child {
+  margin-right: 0; }
+
+.wp-block-wpproz-call-to-action {
+  position: relative; }
+  .wp-block-wpproz-call-to-action .background-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1; }
+  .wp-block-wpproz-call-to-action .background-image-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    z-index: 2; }
+  @media only screen and (min-width: 75em) {
+    .wp-block-wpproz-call-to-action .background-image,
+    .wp-block-wpproz-call-to-action .background-image-overlay {
+      display: block; } }
+  .wp-block-wpproz-call-to-action .content {
+    position: relative;
+    z-index: 3; }

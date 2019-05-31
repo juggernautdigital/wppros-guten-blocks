@@ -1,0 +1,71 @@
+/**
+ * #.# Carousel Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-wpproz-carousel {
+    //@include transform(translate(0,-50%))
+
+    ul.slick-carousel {
+        margin: 0;
+
+        .slick-next,
+        .slick-prev {
+            top: 212px;
+            -webkit-transform: translate(0, -100%);
+            -ms-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+            display: none !important;
+        }
+
+        li {
+            padding: 0 10px;
+            list-style: none;
+
+            .slide-item {
+                position: relative;
+                padding : 30px 30px 70px;
+
+                h2 {
+                    color     : #fff;
+                    font-size : 26px;
+                    margin-top: 0;
+                }
+
+                p {
+                    color: #fff;
+                }
+
+                .button-group {
+                    position: absolute;
+                    bottom  : 0;
+                    left    : 0;
+                    right   : 0;
+                    padding : 30px;
+
+                    a {
+                        color  : #fff;
+                        padding: 15px 20px;
+                    }
+
+                    a.get-quote {
+                        background-color: #fff;
+                        border-radius   : 50px;
+                        color           : #444444;
+                        text-transform  : uppercase;
+                        font-weight     : 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        border: 1px solid #fff;
+    }
+
+    .slick-arrow:before {
+        color: #fff;
+    }
+}

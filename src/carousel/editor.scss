@@ -1,0 +1,10 @@
+/**
+ * #.# Information Boxes Editor Styles...
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block-wpproz-carousel {
+     @include transform(translate(0,0) !important)
+   }

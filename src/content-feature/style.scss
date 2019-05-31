@@ -1,0 +1,191 @@
+/**
+ * #.# Insurance Products Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+ .wp-block-wpproz-insurance-product {
+     position: relative;
+
+     &:before {
+         content   : '';
+         position  : absolute;
+         top       : 0;
+         left      : 0;
+         right     : 0;
+         bottom    : 0;
+         background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+         background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+         background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+     }
+
+     .photo-credit {
+         display         : none;
+         @media (min-width: 783px) {
+             display: block;
+         }
+         position        : absolute;
+         top             : 9rem;
+         right           : 0;
+         padding         : 15px 50px 15px 25px;
+         background-color: rgba(0,0,0,0.3);
+         text-align      : right;
+
+         span {
+             display  : block;
+             color    : #fff;
+             font-size: 12px;
+
+             &:first-child {
+                 font-weight: 700;
+             }
+         }
+     }
+
+     .panel {
+         position        : relative;
+         width           : 100%;
+         @media (min-width: 783px) {
+             width: 50%;
+         }
+         background-color: #3e87d2;
+         text-align      : center;
+
+         .inner-panel {
+             padding: 60px 30px 0;
+             @media (min-width: 783px) {
+                 padding: 60px 45px;
+             }
+
+             img {
+                 width : 45%;
+                 height: auto;
+             }
+
+             h3 {
+                 color: #fff;
+             }
+
+             p {
+                 margin-bottom: 30px;
+             }
+
+             a {
+                 background-color: #fff;
+                 border-radius   : 50px;
+                 padding         : 15px 25px;
+                 display         : inline-block;
+                 font-weight     : 700;
+                 text-transform  : uppercase;
+             }
+         }
+
+         .panel-bullets {
+             position  : relative;
+             width     : 100%;
+             box-sizing: border-box;
+             text-align: left;
+             padding: 0 !important;
+             @media (min-width: 783px) {
+                 position: absolute;
+                 top     : 50%;
+                 @include transform(translate(100%,-50%) !important);
+             }
+
+             .inner-bullets-panel {
+                 position: absolute;
+                 top     : 0;
+                 bottom  : 0;
+                 left    : 0;
+                 right   : 0;
+                 z-index : 1;
+                 opacity : 0.7;
+                 padding: 0 !important;
+             }
+
+             .inner-bullets-panel-content {
+                 position: relative;
+                 z-index : 2;
+                 padding   : 30px;
+                 @media (min-width: 783px) {
+                     padding : 45px;
+                }
+
+                 ul {
+                     margin: 0 !important;
+                     padding: 0 !important;
+
+                     li {
+                         color        : #fff;
+                         margin-bottom: 10px;
+                         list-style: none;
+
+                         &:before {
+                             content     : '\f054';
+                             font-family : 'Font Awesome 5 Pro';
+                             font-weight : 400;
+                             margin-right: 7px;
+                         }
+                     }
+                 }
+
+             }
+
+             .find-out-more {
+               position: relative;
+               z-index : 2;
+               padding   : 0 30px 30px;
+               @media (min-width: 783px) {
+                   padding : 0 45px 45px;
+               }
+               a { color: #fff; font-weight: 400}
+             }
+         }
+     }
+
+     .quote {
+         display    : none;
+         @media (min-width: 783px) {
+             display: block;
+         }
+         position   : absolute;
+         bottom     : 9rem;
+         right      : 0;
+         width      : 300px;
+         text-align : right;
+         color      : #fff;
+         font-weight: 400;
+
+         span {
+             display: block;
+             width  : 100%;
+         }
+     }
+     /*
+     ** Alternate Section
+     */
+     &.content-right {
+         .photo-credit {
+             right     : auto !important;
+             left      : 0 !important;
+             padding   : 15px 25px 15px 50px !important;
+             text-align: left !important;
+         }
+
+         .panel {
+             @media (min-width: 783px) {
+                 right: -50% !important;
+
+                 .panel-bullets {
+                     @include transform(translate(-100%,-50%) !important);
+                 }
+             }
+         }
+
+         .quote {
+             right     : auto !important;
+             left      : 0 !important;
+             text-align: left !important;
+         }
+     }
+ }

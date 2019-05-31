@@ -1,0 +1,16 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project. HELLOWORLD
+*/
+
+@import 'mixins';
+
+$primary-color: rgba(213,30,65,1) !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: rgba(68,68,68,1) !default;
+$secondary-color-light: lighten($secondary-color, 15%) !default;
+$secondary-color-dark: darken($secondary-color, 15%) !default;

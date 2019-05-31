@@ -1,0 +1,27 @@
+/**
+ * #.# Information Boxes Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+ .wp-block-wpproz-information-boxes {
+
+   h2 { margin-bottom: 15px}
+
+   p { margin: 0}
+
+   .btn { background-color: $primary-color; padding: 15px 40px; border-radius: 50px; display: inline-block; box-sizing: border-box; color: #fff; font-weight: 700;}
+
+   .outline-box {
+     border-radius: 0 40px 0 0;
+     border: 1px solid $primary-color;
+     padding: 30px;
+
+     h2, h3, h4 { margin-top: 0; font-weight: 700}
+
+   }
+
+
+
+
+ }

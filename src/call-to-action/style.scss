@@ -1,0 +1,48 @@
+/**
+ * #.# Call to Action Styles...
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-group.button-group-center .wp-block-button { display: inline-block; margin: 0 10px}
+
+.wp-block-group.button-group-center .wp-block-button:first-child { margin-left: 0}
+
+.wp-block-group.button-group-center .wp-block-button:last-child { margin-right: 0}
+
+
+.wp-block-wpproz-call-to-action { position: relative;
+
+
+.background-image {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 40%;
+	background-size: cover;
+	background-position: center;
+	z-index: 1
+}
+.background-image-overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 40%;
+	z-index: 2
+}
+
+@media only screen and (min-width: 75em) {
+	.background-image,
+	.background-image-overlay {
+		display: block;
+	}
+}
+
+
+.content { position: relative; z-index: 3}
+
+}
