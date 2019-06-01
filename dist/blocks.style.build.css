@@ -9,12 +9,12 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-wpproz-insurance-product {
+.wp-block-wpproz-content-feature {
   position: relative;
   /*
      ** Alternate Section
      */ }
-  .wp-block-wpproz-insurance-product:before {
+  .wp-block-wpproz-content-feature:before {
     content: '';
     position: absolute;
     top: 0;
@@ -25,7 +25,7 @@
     background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
     background: -o-linear-gradient(315deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
     background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); }
-  .wp-block-wpproz-insurance-product .photo-credit {
+  .wp-block-wpproz-content-feature .photo-credit {
     display: none;
     position: absolute;
     top: 9rem;
@@ -34,42 +34,47 @@
     background-color: rgba(0, 0, 0, 0.3);
     text-align: right; }
     @media (min-width: 783px) {
-      .wp-block-wpproz-insurance-product .photo-credit {
+      .wp-block-wpproz-content-feature .photo-credit {
         display: block; } }
-    .wp-block-wpproz-insurance-product .photo-credit span {
+    .wp-block-wpproz-content-feature .photo-credit span {
       display: block;
       color: #fff;
       font-size: 12px; }
-      .wp-block-wpproz-insurance-product .photo-credit span:first-child {
+      .wp-block-wpproz-content-feature .photo-credit span:first-child {
         font-weight: 700; }
-  .wp-block-wpproz-insurance-product .panel {
+  .wp-block-wpproz-content-feature .panel {
     position: relative;
     width: 100%;
     background-color: #3e87d2;
-    text-align: center; }
+    text-align: center;
+    color: #fff; }
     @media (min-width: 783px) {
-      .wp-block-wpproz-insurance-product .panel {
+      .wp-block-wpproz-content-feature .panel {
         width: 50%; } }
-    .wp-block-wpproz-insurance-product .panel .inner-panel {
+    .wp-block-wpproz-content-feature .panel .inner-panel {
       padding: 60px 30px 0; }
       @media (min-width: 783px) {
-        .wp-block-wpproz-insurance-product .panel .inner-panel {
+        .wp-block-wpproz-content-feature .panel .inner-panel {
           padding: 60px 45px; } }
-      .wp-block-wpproz-insurance-product .panel .inner-panel img {
+      .wp-block-wpproz-content-feature .panel .inner-panel img {
         width: 45%;
         height: auto; }
-      .wp-block-wpproz-insurance-product .panel .inner-panel h3 {
-        color: #fff; }
-      .wp-block-wpproz-insurance-product .panel .inner-panel p {
+      .wp-block-wpproz-content-feature .panel .inner-panel button.image-button {
+        width: 100%;
+        text-align: center;
+        display: block; }
+      .wp-block-wpproz-content-feature .panel .inner-panel p {
         margin-bottom: 30px; }
-      .wp-block-wpproz-insurance-product .panel .inner-panel a {
+      .wp-block-wpproz-content-feature .panel .inner-panel div.panel-button {
         background-color: #fff;
         border-radius: 50px;
         padding: 15px 25px;
         display: inline-block;
         font-weight: 700;
         text-transform: uppercase; }
-    .wp-block-wpproz-insurance-product .panel .panel-bullets {
+        .wp-block-wpproz-content-feature .panel .inner-panel div.panel-button a {
+          color: inherit; }
+    .wp-block-wpproz-content-feature .panel .panel-bullets {
       position: relative;
       width: 100%;
       -webkit-box-sizing: border-box;
@@ -77,13 +82,13 @@
       text-align: left;
       padding: 0 !important; }
       @media (min-width: 783px) {
-        .wp-block-wpproz-insurance-product .panel .panel-bullets {
+        .wp-block-wpproz-content-feature .panel .panel-bullets {
           position: absolute;
           top: 50%;
           -webkit-transform: translate(100%, -50%) !important;
           -ms-transform: translate(100%, -50%) !important;
           transform: translate(100%, -50%) !important; } }
-      .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel {
+      .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -92,36 +97,35 @@
         z-index: 1;
         opacity: 0.7;
         padding: 0 !important; }
-      .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content {
+      .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content {
         position: relative;
         z-index: 2;
         padding: 30px; }
         @media (min-width: 783px) {
-          .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content {
+          .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content {
             padding: 45px; } }
-        .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content ul {
+        .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content ul {
           margin: 0 !important;
           padding: 0 !important; }
-          .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content ul li {
-            color: #fff;
+          .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content ul li {
             margin-bottom: 10px;
             list-style: none; }
-            .wp-block-wpproz-insurance-product .panel .panel-bullets .inner-bullets-panel-content ul li:before {
+            .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content ul li:before {
               content: '\f054';
               font-family: 'Font Awesome 5 Pro';
               font-weight: 400;
               margin-right: 7px; }
-      .wp-block-wpproz-insurance-product .panel .panel-bullets .find-out-more {
+      .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more {
         position: relative;
         z-index: 2;
         padding: 0 30px 30px; }
         @media (min-width: 783px) {
-          .wp-block-wpproz-insurance-product .panel .panel-bullets .find-out-more {
+          .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more {
             padding: 0 45px 45px; } }
-        .wp-block-wpproz-insurance-product .panel .panel-bullets .find-out-more a {
+        .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more a {
           color: #fff;
           font-weight: 400; }
-  .wp-block-wpproz-insurance-product .quote {
+  .wp-block-wpproz-content-feature .quote {
     display: none;
     position: absolute;
     bottom: 9rem;
@@ -131,24 +135,24 @@
     color: #fff;
     font-weight: 400; }
     @media (min-width: 783px) {
-      .wp-block-wpproz-insurance-product .quote {
+      .wp-block-wpproz-content-feature .quote {
         display: block; } }
-    .wp-block-wpproz-insurance-product .quote span {
+    .wp-block-wpproz-content-feature .quote span {
       display: block;
       width: 100%; }
-  .wp-block-wpproz-insurance-product.content-right .photo-credit {
+  .wp-block-wpproz-content-feature.content-right .photo-credit {
     right: auto !important;
     left: 0 !important;
     padding: 15px 25px 15px 50px !important;
     text-align: left !important; }
   @media (min-width: 783px) {
-    .wp-block-wpproz-insurance-product.content-right .panel {
+    .wp-block-wpproz-content-feature.content-right .panel {
       right: -50% !important; }
-      .wp-block-wpproz-insurance-product.content-right .panel .panel-bullets {
+      .wp-block-wpproz-content-feature.content-right .panel .panel-bullets {
         -webkit-transform: translate(-100%, -50%) !important;
         -ms-transform: translate(-100%, -50%) !important;
         transform: translate(-100%, -50%) !important; } }
-  .wp-block-wpproz-insurance-product.content-right .quote {
+  .wp-block-wpproz-content-feature.content-right .quote {
     right: auto !important;
     left: 0 !important;
     text-align: left !important; }

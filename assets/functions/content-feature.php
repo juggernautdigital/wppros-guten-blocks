@@ -1,7 +1,7 @@
 <?php
-function render_block_wpproz_blocks_insurance_product( $attributes, $content ) {
+function render_block_wpproz_content_feature( $attributes, $content ) {
 
-		 $class = 'wp-block-wpproz-insurance-product';
+		 $class = 'wp-block-wpproz-content-feature';
 		 if ( isset( $attributes['align'] ) ) {
 		 $class .= ' align' . $attributes['align'];
 		 }
@@ -15,36 +15,24 @@ function render_block_wpproz_blocks_insurance_product( $attributes, $content ) {
 		$content_position = $attributes['mediaPosition'];
 		}
 
-		if ( isset( $attributes['productTitle'] ) ) {
-		$product_title = $attributes['productTitle'];
+		if ( isset( $attributes['contentTitle'] ) ) {
+		$content_title = $attributes['contentTitle'];
 		}
 
-		if ( isset( $attributes['productDescription'] ) ) {
-		$product_description = $attributes['productDescription'];
+		if ( isset( $attributes['contentDescription'] ) ) {
+		$content_description = $attributes['contentDescription'];
 		}
 
-		if ( isset( $attributes['productFeatureOne'] ) ) {
-		$product_feature_one = $attributes['productFeatureOne'];
+		if ( isset( $attributes['contentButton'] ) ) {
+		$content_button = $attributes['contentButton'];
 		}
 
-		if ( isset( $attributes['productFeatureTwo'] ) ) {
-		$product_feature_two = $attributes['productFeatureTwo'];
+		if ( isset( $attributes['contentFeatures'] ) ) {
+		$content_features = $attributes['contentFeatures'];
 		}
 
-		if ( isset( $attributes['productFeatureThree'] ) ) {
-		$product_feature_three = $attributes['productFeatureThree'];
-		}
-
-		if ( isset( $attributes['productFeatureFour'] ) ) {
-		$product_feature_four = $attributes['productFeatureFour'];
-		}
-
-		if ( isset( $attributes['productFeatureFive'] ) ) {
-		$product_feature_five = $attributes['productFeatureFive'];
-		}
-
-		if ( isset( $attributes['productFeatureLink'] ) ) {
-		$product_feature_link = $attributes['productFeatureLink'];
+		if ( isset( $attributes['contentFeaturesButton'] ) ) {
+		$content_features_button = $attributes['contentFeaturesButton'];
 		}
 
 		if ( isset( $attributes['mediaURL'] ) ) {
@@ -52,19 +40,23 @@ function render_block_wpproz_blocks_insurance_product( $attributes, $content ) {
 		}
 
 		if ( isset( $attributes['iconURL'] ) ) {
-		$product_icon = $attributes['iconURL'];
+		$content_icon = $attributes['iconURL'];
 		}
 
-		if ( isset( $attributes['productColor'] ) ) {
-		$product_color = $attributes['productColor'];
+		if ( isset( $attributes['contentColor'] ) ) {
+		$content_color = $attributes['contentColor'];
 		}
 
-		if ( isset( $attributes['productQuote'] ) ) {
-		$product_quote = $attributes['productQuote'];
+		if ( isset( $attributes['contentTextColor'] ) ) {
+		$content_text_color = $attributes['contentTextColor'];
 		}
 
-		if ( isset( $attributes['productQuoteName'] ) ) {
-		$product_quote_name = $attributes['productQuoteName'];
+		if ( isset( $attributes['contentQuote'] ) ) {
+		$content_quote = $attributes['contentQuote'];
+		}
+
+		if ( isset( $attributes['contentQuoteName'] ) ) {
+		$content_quote_name = $attributes['contentQuoteName'];
 		}
 
 		if ( isset( $attributes['photoCredit'] ) ) {
@@ -82,13 +74,13 @@ function render_block_wpproz_blocks_insurance_product( $attributes, $content ) {
  }
 
 
-function wpproz_blocks_munster_insurance_products() {
+function wpproz_blocks_content_feature() {
 
 				register_block_type( 'wpproz/content-feature', array(
 
 							'attributes'      => array(
 
-											'productColor' => array(
+											'contentColor' => array(
 											'type'    => 'string',
 											'default' => '#444'
 											),
@@ -105,9 +97,9 @@ function wpproz_blocks_munster_insurance_products() {
 
 							),
 
-							'render_callback' => 'render_block_wpproz_blocks_insurance_product',
+							'render_callback' => 'render_block_wpproz_content_feature',
 
 				) );
 
  }
- add_action( 'init', 'wpproz_blocks_munster_insurance_products', 20 );
+ add_action( 'init', 'wpproz_blocks_content_feature', 20 );
