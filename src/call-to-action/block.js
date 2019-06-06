@@ -27,6 +27,14 @@ const {
 	source, // For attribute sources
 } = wp.blocks; // Import registerBlockType() from wp.blocks
 
+
+
+const {
+	withState, // For attribute sources
+} = wp.compose; // Import registerBlockType() from wp.blocks
+
+
+
 const {
 	InspectorControls,
 	RichText,
@@ -57,6 +65,7 @@ const {
   BaseControl,
   RangeControl,
   ToggleControl,
+  SelectControl,
   Path,
   SVG
 } = wp.components;
@@ -147,12 +156,21 @@ registerBlockType('wpproz/call-to-action', {
           deafult: 5
         },
 
+        iconWeight: {
+          type: 'string'
+        },
+
         iconColor: {
 					type: 'string',
 					default: '#444444'
 				},
 
         iconMarginBottom: {
+          type: 'number',
+          deafult: 0
+        },
+
+        iconMarginBottomSmall: {
           type: 'number',
           deafult: 0
         },
@@ -192,8 +210,11 @@ registerBlockType('wpproz/call-to-action', {
               mediaPosition,
               verticalAlignment,
               iconSize,
+              iconWeight,
               icon,
               iconColor,
+              iconMarginBottom,
+              iconMarginBottomSmall,
               verticalPadding,
               showIcon
 
@@ -292,6 +313,14 @@ registerBlockType('wpproz/call-to-action', {
             });
           };
 
+          const onChangeIconMarginBottomSmall = value => {
+            props.setAttributes({
+              iconMarginBottomSmall: value
+            });
+          };
+
+
+
           function onChangeTextColor(newTextColor) {
             setAttributes({
               textColor: newTextColor
@@ -377,12 +406,16 @@ registerBlockType('wpproz/call-to-action', {
             setAttributes( { showIcon: newURL } );
           };
 
+          const onChangeIconWeight = newIconWeight => {
+            setAttributes( { iconWeight: newIconWeight } );
+          };
+
 
           function renderTheIcon() {
             if (props.attributes.showIcon == true) {
               return (
 
-      <i className={ 'fal ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottom } style={ icon_style }></i>
+      <i className={ props.attributes.iconWeight + ' ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottomSmall + ' mb-md-' + props.attributes.iconMarginBottom } style={ icon_style }></i>
 
               );
             }
@@ -409,14 +442,16 @@ registerBlockType('wpproz/call-to-action', {
 
                   <div className={ 'row' + ' ' + props.attributes.verticalAlignment + '-xs' }>
 
-                      <div className={ 'col-sm-12 col-lg-4 text-center content' }>
+                      <div className={ 'col-xs-12 col-md-4 text-center content' }>
 
                               { renderTheIcon() }
 
                       </div>
 
-                      <div className={ 'col-sm-12 col-lg-8 content' }>
-                      <InnerBlocks template={ TEMPLATE } />
+                      <div className={ 'col-xs-12 col-md-8 content text-center text-md-left' }>
+
+                        <InnerBlocks template={ TEMPLATE } />
+
                       </div>
 
                   </div>
@@ -463,9 +498,6 @@ registerBlockType('wpproz/call-to-action', {
               );
             }
           };
-
-
-
 
 
 
@@ -592,10 +624,31 @@ registerBlockType('wpproz/call-to-action', {
             help={ __( '' ) }
             />
 
+            <SelectControl
+                label="Icon Weight"
+                value={ iconWeight }
+                options={ [
+                    { label: 'Solid', value: 'fas' },
+                    { label: 'Regular', value: 'far' },
+                    { label: 'Light', value: 'fal' },
+                ] }
+                onChange={ onChangeIconWeight }
+            />
+
             <RangeControl
             label={ __( 'Icon Margin Bottom' ) }
             value={ props.attributes.iconMarginBottom }
             onChange={ onChangeIconMarginBottom }
+            initialPosition={ 0 }
+            min={ 0 }
+            max={ 15 }
+            help={ __( '' ) }
+            />
+
+            <RangeControl
+            label={ __( 'Icon Margin Bottom Small Screen' ) }
+            value={ props.attributes.iconMarginBottomSmall }
+            onChange={ onChangeIconMarginBottomSmall }
             initialPosition={ 0 }
             min={ 0 }
             max={ 15 }
@@ -719,15 +772,15 @@ registerBlockType('wpproz/call-to-action', {
 
                                <div className={ 'row' + ' ' + props.attributes.verticalAlignment + '-xs' }>
 
-                                       <div className={ 'col-sm-12 col-lg-4 text-center content' }>
+                                       <div className={ 'col-xs-12 col-md-4 text-center content' }>
 
-       { (isShowIcon) ? ({}) : ( <i className={ 'fal ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottom } style={ icon_style }></i> ) }
+       { (isShowIcon) ? ({}) : ( <i className={ props.attributes.iconWeight + ' ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottomSmall + ' mb-md-' + props.attributes.iconMarginBottom } style={ icon_style }></i> ) }
 
 
 
                                        </div>
 
-                                       <div className={ 'col-sm-12 col-lg-8 content' }>
+                                       <div className={ 'col-xs-12 col-md-8 content text-center text-md-left' }>
 
                                                <InnerBlocks.Content />
 
@@ -753,7 +806,7 @@ registerBlockType('wpproz/call-to-action', {
 
                                        <div className={ 'col-xs-12' }>
 
-                                               { (isShowIcon) ? ({}) : ( <i className={ 'fal ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottom }></i> ) }
+                                               { (isShowIcon) ? ({}) : ( <i className={ props.attributes.iconWeight + ' ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottomSmall + ' mb-md-' + props.attributes.iconMarginBottom }></i> ) }
 
                                                <InnerBlocks.Content />
 
@@ -873,7 +926,7 @@ registerBlockType('wpproz/call-to-action', {
 
                                                  <div className={ 'col-xs-4 text-center content' }>
 
-                 { (isShowIcon) ? ({}) : ( <i className={ 'fal ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottom } style={ icon_style }></i> ) }
+                 { (isShowIcon) ? ({}) : ( <i className={ props.attributes.iconWeight + ' ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottom } style={ icon_style }></i> ) }
 
 
 
@@ -905,7 +958,7 @@ registerBlockType('wpproz/call-to-action', {
 
                                                  <div className={ 'col-xs-12' }>
 
-                                                         { (isShowIcon) ? ({}) : ( <i className={ 'fal ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottom }></i> ) }
+                                                         { (isShowIcon) ? ({}) : ( <i className={ props.attributes.iconWeight + ' ' + props.attributes.icon + ' fa-' + props.attributes.iconSize + 'x ' + 'mb-' + props.attributes.iconMarginBottom }></i> ) }
 
                                                          <InnerBlocks.Content />
 

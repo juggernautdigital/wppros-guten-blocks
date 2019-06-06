@@ -5,4 +5,15 @@
  * which makes it higher in priority.
  */
 
- .information-boxes { color: #000 }
+.wp-block-wpproz-information-boxes {
+
+  .outline-boxes .block-core-columns {
+    border-radius: 0 40px 0 0;
+    border: 1px solid $primary-color;
+    padding: 30px;
+
+    h2, h3, h4 { margin-top: 0; font-weight: 700}
+
+  }
+
+}

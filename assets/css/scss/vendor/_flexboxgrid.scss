@@ -1,3 +1,5 @@
+// main: ../../css/styles.scss
+
 @import "flex";
 
 // Set the number of columns you want to use on your layout.
@@ -13,7 +15,7 @@ $breakpoints:
 sm 48em 46rem,
 md 62em 61rem,
 lg 75em 71rem !default;
-$flexboxgrid-max-width: 1000px !default;
+$flexboxgrid-max-width: 1400px !default;
 
 //
 // -- Stop editing -- //
@@ -215,4 +217,6 @@ $name: xs;
 [class^="col-"] { padding: 0}
 }
 
-.wrapper .wrapper .row { margin-left: 0; margin-right: 0;}
+.wrapper .wrapper { padding-left: 0; padding-right: 0; }
+
+.wrapper .alignfull .wrapper { padding-left: 30px; padding-right: 30px; }

@@ -63,7 +63,7 @@ function wpproz_blocks_information_boxes() {
 
 				register_block_type( 'wpproz/information-boxes', array(
 
-							'render_callback' => 'render_block_wpproz_blocks_information_boxes',
+							//'render_callback' => 'render_block_wpproz_blocks_information_boxes',
 
 				) );
 

@@ -1,4 +1,4 @@
-// main: ../../css/stylesheet.scss
+// main: ../../css/styles.scss
 
 // Variables
 
@@ -28,7 +28,12 @@ $spacers: map-merge(
     12: ($spacer * 5.5),
     13: ($spacer * 6),
     14: ($spacer * 6.5),
-    15: ($spacer * 7)
+    15: ($spacer * 7),
+    16: ($spacer * 7.5),
+    17: ($spacer * 8),
+    18: ($spacer * 8.5),
+    19: ($spacer * 9),
+    20: ($spacer * 9.5)
   ),
   $spacers
 );
@@ -57,10 +62,10 @@ $grid-breakpoints: () !default;
 $grid-breakpoints: map-merge(
   (
 
-    s: 0px,
-    m: 600px,
-    l: 992px,
-    xl: 1200px
+    xs: 0em,
+    sm: 48em,
+    md: 62em,
+    lg: 75em
   ),
   $grid-breakpoints
 );

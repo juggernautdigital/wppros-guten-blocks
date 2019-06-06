@@ -5,7 +5,7 @@
  * that are used across the project. HELLOWORLD
 */
 /**
- * #.# Insurance Products Styles...
+ * #.# Content Feature Styles...
  *
  * CSS for both Frontend+Backend.
  */
@@ -33,7 +33,7 @@
     padding: 15px 50px 15px 25px;
     background-color: rgba(0, 0, 0, 0.3);
     text-align: right; }
-    @media (min-width: 783px) {
+    @media (min-width: 48em) {
       .wp-block-wpproz-content-feature .photo-credit {
         display: block; } }
     .wp-block-wpproz-content-feature .photo-credit span {
@@ -48,12 +48,12 @@
     background-color: #3e87d2;
     text-align: center;
     color: #fff; }
-    @media (min-width: 783px) {
+    @media (min-width: 48em) {
       .wp-block-wpproz-content-feature .panel {
         width: 50%; } }
     .wp-block-wpproz-content-feature .panel .inner-panel {
       padding: 60px 30px 0; }
-      @media (min-width: 783px) {
+      @media (min-width: 48em) {
         .wp-block-wpproz-content-feature .panel .inner-panel {
           padding: 60px 45px; } }
       .wp-block-wpproz-content-feature .panel .inner-panel img {
@@ -81,7 +81,7 @@
               box-sizing: border-box;
       text-align: left;
       padding: 0 !important; }
-      @media (min-width: 783px) {
+      @media (min-width: 48em) {
         .wp-block-wpproz-content-feature .panel .panel-bullets {
           position: absolute;
           top: 50%;
@@ -101,7 +101,7 @@
         position: relative;
         z-index: 2;
         padding: 30px; }
-        @media (min-width: 783px) {
+        @media (min-width: 48em) {
           .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content {
             padding: 45px; } }
         .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content ul {
@@ -119,7 +119,7 @@
         position: relative;
         z-index: 2;
         padding: 0 30px 30px; }
-        @media (min-width: 783px) {
+        @media (min-width: 48em) {
           .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more {
             padding: 0 45px 45px; } }
         .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more a {
@@ -134,7 +134,7 @@
     text-align: right;
     color: #fff;
     font-weight: 400; }
-    @media (min-width: 783px) {
+    @media (min-width: 48em) {
       .wp-block-wpproz-content-feature .quote {
         display: block; } }
     .wp-block-wpproz-content-feature .quote span {
@@ -145,7 +145,7 @@
     left: 0 !important;
     padding: 15px 25px 15px 50px !important;
     text-align: left !important; }
-  @media (min-width: 783px) {
+  @media (min-width: 48em) {
     .wp-block-wpproz-content-feature.content-right .panel {
       right: -50% !important; }
       .wp-block-wpproz-content-feature.content-right .panel .panel-bullets {
@@ -183,66 +183,13 @@
   color: #fff;
   font-weight: 700; }
 
-.wp-block-wpproz-information-boxes .outline-box {
+.wp-block-wpproz-information-boxes .outline-boxes .wp-block-column {
   border-radius: 0 40px 0 0;
   border: 1px solid #d51e41;
   padding: 30px; }
-  .wp-block-wpproz-information-boxes .outline-box h2, .wp-block-wpproz-information-boxes .outline-box h3, .wp-block-wpproz-information-boxes .outline-box h4 {
+  .wp-block-wpproz-information-boxes .outline-boxes .wp-block-column h2, .wp-block-wpproz-information-boxes .outline-boxes .wp-block-column h3, .wp-block-wpproz-information-boxes .outline-boxes .wp-block-column h4 {
     margin-top: 0;
     font-weight: 700; }
-/**
- * #.# Common SCSS
- *
- * Can include things like variables and mixins
- * that are used across the project. HELLOWORLD
-*/
-/**
- * #.# Carousel Styles...
- *
- * CSS for both Frontend+Backend.
- */
-.wp-block-wpproz-carousel ul.slick-carousel {
-  margin: 0; }
-  .wp-block-wpproz-carousel ul.slick-carousel .slick-next,
-  .wp-block-wpproz-carousel ul.slick-carousel .slick-prev {
-    top: 212px;
-    -webkit-transform: translate(0, -100%);
-    -ms-transform: translate(0, -100%);
-    transform: translate(0, -100%);
-    display: none !important; }
-  .wp-block-wpproz-carousel ul.slick-carousel li {
-    padding: 0 10px;
-    list-style: none; }
-    .wp-block-wpproz-carousel ul.slick-carousel li .slide-item {
-      position: relative;
-      padding: 30px 30px 70px; }
-      .wp-block-wpproz-carousel ul.slick-carousel li .slide-item h2 {
-        color: #fff;
-        font-size: 26px;
-        margin-top: 0; }
-      .wp-block-wpproz-carousel ul.slick-carousel li .slide-item p {
-        color: #fff; }
-      .wp-block-wpproz-carousel ul.slick-carousel li .slide-item .button-group {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 30px; }
-        .wp-block-wpproz-carousel ul.slick-carousel li .slide-item .button-group a {
-          color: #fff;
-          padding: 15px 20px; }
-        .wp-block-wpproz-carousel ul.slick-carousel li .slide-item .button-group a.get-quote {
-          background-color: #fff;
-          border-radius: 50px;
-          color: #444444;
-          text-transform: uppercase;
-          font-weight: 700; }
-
-.wp-block-wpproz-carousel .slick-arrow {
-  border: 1px solid #fff; }
-
-.wp-block-wpproz-carousel .slick-arrow:before {
-  color: #fff; }
 /**
  * #.# Common SCSS
  *
@@ -284,7 +231,7 @@
     bottom: 0;
     width: 40%;
     z-index: 2; }
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 62em) {
     .wp-block-wpproz-call-to-action .background-image,
     .wp-block-wpproz-call-to-action .background-image-overlay {
       display: block; } }

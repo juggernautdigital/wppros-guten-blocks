@@ -214,6 +214,49 @@ registerBlockType('wpproz/information-boxes', {
             });
           };
 
+
+
+          const INFOTEMPLATE = [
+            ['core/columns', {
+          		columns: 2,
+              verticalAlignment:'center',
+              className:'mt-10 mb-5'
+          	},[
+
+          		['core/column', { width: 70 }, [
+                ['core/heading', { placeholder: 'Enter a title...', level: 2 }],
+          			['core/paragraph', { placeholder: 'Enter some text to display below the title...' }]
+          		]],
+          		['core/column', { width: 30 },[
+                ['core/button', { placeholder: 'Enter text...', align: 'right' }],
+          		]]
+
+          	]
+          ],
+          	['core/columns', {
+          		columns: 3,
+              className: 'mb-10 outline-boxes',
+          	},[
+
+          		['core/column', {}, [
+                ['core/heading', { placeholder: 'Enter heading...', level: 3 }],
+          			['core/paragraph', { placeholder: 'Enter content...' }]
+          		]],
+          		['core/column', {},[
+                ['core/heading', { placeholder: 'Enter heading...', level: 3 }],
+          			['core/paragraph', { placeholder: 'Enter content...' }]
+          		]],
+          		['core/column', {},[
+                ['core/heading', { placeholder: 'Enter heading...', level: 3 }],
+          			['core/paragraph', { placeholder: 'Enter content...' }]
+          		]]
+
+          	]
+            ]];
+
+
+
+
 					return [
 
 <InspectorControls key="inspector">
@@ -361,50 +404,9 @@ registerBlockType('wpproz/information-boxes', {
 </InspectorControls>,
 <div className={ className } style={ block_style_one }>
 
-	<div class="wrapper container-fluid">
 
-		<div class="row mb-0 middle-xs mb-5">
+<InnerBlocks template={INFOTEMPLATE} />
 
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-
-				<h2 class="mt-0 font-weight-bold">{ props.attributes.title }</h2>
-				<p class="mb-0">{ props.attributes.subTitle }</p>
-
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 end-xs">
-
-				<a class="btn" href="#">{ props.attributes.buttonLabel }</a>
-
-			</div>
-
-		</div>
-
-		<div class="row">
-
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-				<div class="outline-box mb-5 mb-m-0">
-					<h3>{ props.attributes.boxOneTitle }</h3>
-					<p>{ props.attributes.boxOneContent }</p>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-				<div class="outline-box mb-5 mb-m-0">
-        <h3>{ props.attributes.boxTwoTitle }</h3>
-        <p>{ props.attributes.boxTwoContent }</p>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-				<div class="outline-box">
-        <h3>{ props.attributes.boxThreeTitle }</h3>
-        <p>{ props.attributes.boxThreeContent }</p>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
 
 
 </div>
@@ -434,8 +436,9 @@ save: props => {
 
 
 		return (
-
-  				null
+              <div className={ className }>
+                <InnerBlocks.Content />
+              </div>
 
   		);
   	}

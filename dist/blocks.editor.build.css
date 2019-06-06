@@ -5,13 +5,11 @@
  * that are used across the project. HELLOWORLD
 */
 /**
- * #.# Insurance Products Editor Styles...
+ * #.# Content Feature Editor Styles...
  *
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.insurance-products {
-  color: #000; }
 /**
  * #.# Common SCSS
  *
@@ -24,24 +22,13 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.information-boxes {
-  color: #000; }
-/**
- * #.# Common SCSS
- *
- * Can include things like variables and mixins
- * that are used across the project. HELLOWORLD
-*/
-/**
- * #.# Information Boxes Editor Styles...
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
-.wp-block-wpproz-carousel {
-  -webkit-transform: translate(0, 0) !important;
-  -ms-transform: translate(0, 0) !important;
-  transform: translate(0, 0) !important; }
+.wp-block-wpproz-information-boxes .outline-boxes .block-core-columns {
+  border-radius: 0 40px 0 0;
+  border: 1px solid #d51e41;
+  padding: 30px; }
+  .wp-block-wpproz-information-boxes .outline-boxes .block-core-columns h2, .wp-block-wpproz-information-boxes .outline-boxes .block-core-columns h3, .wp-block-wpproz-information-boxes .outline-boxes .block-core-columns h4 {
+    margin-top: 0;
+    font-weight: 700; }
 /**
  * #.# Common SCSS
  *

@@ -1,5 +1,5 @@
 /**
- * #.# Insurance Products Styles...
+ * #.# Content Feature Styles...
  *
  * CSS for both Frontend+Backend.
  */
@@ -20,7 +20,7 @@
 
 	.photo-credit {
 		display         : none;
-		@media (min-width: 783px) {
+		@media (min-width: 48em) {
 			display: block;
 		}
 		position        : absolute;
@@ -44,7 +44,7 @@
 	.panel {
 		position        : relative;
 		width           : 100%;
-		@media (min-width: 783px) {
+		@media (min-width: 48em) {
 			width: 50%;
 		}
 		background-color: #3e87d2;
@@ -53,7 +53,7 @@
 
 		.inner-panel {
 			padding: 60px 30px 0;
-			@media (min-width: 783px) {
+			@media (min-width: 48em) {
 				padding: 60px 45px;
 			}
 
@@ -94,7 +94,7 @@
 			box-sizing: border-box;
 			text-align: left;
 			padding   : 0 !important;
-			@media (min-width: 783px) {
+			@media (min-width: 48em) {
 				position: absolute;
 				top     : 50%;
 				@include transform(translate(100%,-50%) !important);
@@ -115,7 +115,7 @@
 				position: relative;
 				z-index : 2;
 				padding : 30px;
-				@media (min-width: 783px) {
+				@media (min-width: 48em) {
 					padding: 45px;
 				}
 
@@ -141,7 +141,7 @@
 				position: relative;
 				z-index : 2;
 				padding : 0 30px 30px;
-				@media (min-width: 783px) {
+				@media (min-width: 48em) {
 					padding: 0 45px 45px;
 				}
 
@@ -155,7 +155,7 @@
 
 	.quote {
 		display    : none;
-		@media (min-width: 783px) {
+		@media (min-width: 48em) {
 			display: block;
 		}
 		position   : absolute;
@@ -183,7 +183,7 @@
 		}
 
 		.panel {
-			@media (min-width: 783px) {
+			@media (min-width: 48em) {
 				right: -50% !important;
 
 				.panel-bullets {
