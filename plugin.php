@@ -6,6 +6,8 @@
  * Version: 1.0
  * Author: WP-Proz
  * Author URI: http://www.wp-proz.com
+ * GitHub Plugin URI: juggernautdigital/wpproz-guten-blocks
+ * GitHub Plugin URI: https://github.com/juggernautdigital/wpproz-guten-blocks
  *
  * @package CGB
  */
