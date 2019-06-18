@@ -1,0 +1,37 @@
+@mixin transition($speed, $delay) {
+    -webkit-transition: all $speed ease-in-out $delay !important;
+    -moz-transition   : all $speed ease-in-out $delay !important;
+    -ms-transition    : all $speed ease-in-out $delay !important;
+    -o-transition     : all $speed ease-in-out $delay !important;
+    transition        : all $speed ease-in-out $delay !important;
+}
+
+@mixin animation($name, $duration) {
+-webkit-animation: $name $duration; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: $name $duration; /* Firefox < 16 */
+        -ms-animation: $name $duration; /* Internet Explorer */
+         -o-animation: $name $duration; /* Opera < 12.1 */
+            animation: $name $duration;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform   : $property;
+    -ms-transform    : $property;
+    -o-transform     : $property;
+    transform        : $property;
+}
+
+@mixin primary_text_color($opacity) {
+    color: rgba(213,30,65,$opacity);
+}
+@mixin primary_bg_color($opacity) {
+    background-color: rgba(213,30,65,$opacity);
+}
+
+@mixin secondary_text_color($opacity) {
+    color: rgba(68,68,68,$opacity);
+}
+@mixin secondary_bg_color($opacity) {
+    background-color: rgba(68,68,68,$opacity);
+}
