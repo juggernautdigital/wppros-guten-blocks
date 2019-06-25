@@ -236,6 +236,8 @@ registerBlockType('wpproz/call-to-action', {
             backgroundImage: 'url(' + media_url + ')',
             backgroundColor: background_color,
             color: text_color,
+            backgroundPosition: 'center center',
+            backgroundSize:'cover'
           };
 
           const block_style_left = {
@@ -718,6 +720,8 @@ registerBlockType('wpproz/call-to-action', {
              backgroundImage: 'url(' + media_url + ')',
              backgroundColor: background_color,
              color: text_color,
+             backgroundPosition: 'center center',
+             backgroundSize:'cover'
            };
 
            const block_style_left = {
