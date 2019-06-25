@@ -32,7 +32,8 @@
     right: 0;
     padding: 15px 50px 15px 25px;
     background-color: rgba(0, 0, 0, 0.3);
-    text-align: right; }
+    text-align: right;
+    z-index: 10; }
     @media (min-width: 48em) {
       .wp-block-wpproz-content-feature .photo-credit {
         display: block; } }
