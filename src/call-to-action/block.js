@@ -36,20 +36,23 @@ const {
 
 
 const {
-	InspectorControls,
-	RichText,
 	AlignmentToolbar,
-	BlockControls,
 	BlockAlignmentToolbar,
-	InnerBlocks,
 	Fragment,
-	MediaUpload,
 	MediaUploadCheck,
 	withColors,
-	PanelColorSettings,
   ColorPalette,
 	getColorClassName
 } = wp.editor;
+
+const {
+	InspectorControls,
+	RichText,
+	BlockControls,
+	InnerBlocks,
+	MediaUpload,
+	PanelColorSettings,
+} = wp.blockEditor;
 
 const {
 	Toolbar,
