@@ -155,8 +155,8 @@ function wpproz_register_block_types() {
 	$block_names = array(
 		'content-feature.php'        		=> 'wpproz/content-feature',
 		'information-boxes.php'         => 'wpproz/information-boxes',
-		'carousel.php'           				=> 'wpproz/carousel',
 		'call-to-action.php'           	=> 'wpproz/call-to-action',
+		'google-map.php'           			=> 'wpproz/google-map',
 	);
 
 	foreach ( $block_names as $file => $block_name ) {
