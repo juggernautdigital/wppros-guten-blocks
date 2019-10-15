@@ -17,7 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Block Initializer.
- */
+require_once plugin_dir_path( __FILE__ ) . 'wpproz-guten-blocks-template-loader.php';
+
 require_once plugin_dir_path( __FILE__ ) . 'src/init.php';

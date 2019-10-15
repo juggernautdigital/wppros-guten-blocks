@@ -130,6 +130,16 @@ function wpproz_blocks_includes() {
 				[ 'jquery', 'slick-slider-core' ]
 		);
 
+		if (function_exists('add_google_map_api')) {
+
+        wp_enqueue_script(
+        'wpproz-google-api',
+        'https://maps.googleapis.com/maps/api/js?key=' . add_google_map_api() . '&callback=initMap',
+        array( 'jquery' ), false, true
+        );
+
+    }
+
 }
 
 // Hook the enqueue functions into the frontend and editor
@@ -157,6 +167,7 @@ function wpproz_register_block_types() {
 		'information-boxes.php'         => 'wpproz/information-boxes',
 		'call-to-action.php'           	=> 'wpproz/call-to-action',
 		'google-map.php'           			=> 'wpproz/google-map',
+		'rolling-posts.php'           	=> 'wpproz/rolling-posts',
 	);
 
 	foreach ( $block_names as $file => $block_name ) {
