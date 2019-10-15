@@ -157,7 +157,25 @@ registerBlockType( 'wpproz/rolling-posts', {
       </InspectorControls>,
 
       <div className={ className + vertical_padding }>
-
+        <div class="wrapper container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4">
+              <div class="blog-item">
+                <p>Your post will be displayed here</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4">
+              <div class="blog-item">
+                <p>Your post will be displayed here</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4">
+              <div class="blog-item">
+                <p>Your post will be displayed here</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
 		];
