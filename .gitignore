@@ -1,6 +1,9 @@
 node_modules
 package.json
 package-lock.json
+.editorconfig
+.eslintignore
+.eslintrc.json
 
 ## Uncomment line below if you prefer to
 ## keep compiled files out of version control
