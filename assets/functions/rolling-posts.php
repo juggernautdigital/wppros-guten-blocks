@@ -32,7 +32,7 @@ function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
 		$templates = new WPProz_Guten_Blocks_Template_Loader;
 		$templates
 				->set_template_data($data, 'guten_blocks')
-				->get_template_part('loop');
+				->get_template_part('rolling-posts/loop');
 
 	 	//include( plugin_dir_path( __FILE__ ) . '../includes/rolling-posts.php');
 		$output = ob_get_clean();

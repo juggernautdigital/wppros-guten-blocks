@@ -3,6 +3,13 @@
 
 <section class="blog-wrapper blog-snippet <?php echo $classes ?>">
 
+<?php
+if(empty($the_post_type)){
+  $rp_post_type = 'post';
+} else {
+  $rp_post_type = $the_post_type;
+}
+?>
 
   <div class="wrapper container-fluid">
   <div class="row">
@@ -16,7 +23,7 @@
 
 <?php
 $args = array(
-    'post_type' => 'post',
+    'post_type' => $rp_post_type,
     'posts_per_page' => 3
 );
 $query = new WP_Query( $args );
@@ -30,7 +37,7 @@ $query = new WP_Query( $args );
 <?php
 $templates = new WPProz_Guten_Blocks_Template_Loader;
 $templates
-    ->get_template_part('loop-post');
+    ->get_template_part('rolling-posts/loop-post');
 ?>
 
 <?php endwhile; ?>
