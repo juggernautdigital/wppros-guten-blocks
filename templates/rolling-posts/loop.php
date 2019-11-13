@@ -1,5 +1,6 @@
 <?php $classes = $guten_blocks->class_names; ?>
 <?php $the_post_type = $guten_blocks->the_post_type; ?>
+<?php $the_post_loop = $guten_blocks->the_post_loop; ?>
 
 <section class="blog-wrapper blog-snippet <?php echo $classes ?>">
 
@@ -8,6 +9,14 @@ if(empty($the_post_type)){
   $rp_post_type = 'post';
 } else {
   $rp_post_type = $the_post_type;
+}
+?>
+
+<?php
+if(empty($the_post_loop)){
+  $rp_post_loop = 'rolling-posts/loop-post';
+} else {
+  $rp_post_loop = 'rolling-posts/loop-' . $the_post_loop;
 }
 ?>
 
@@ -37,7 +46,7 @@ $query = new WP_Query( $args );
 <?php
 $templates = new WPProz_Guten_Blocks_Template_Loader;
 $templates
-    ->get_template_part('rolling-posts/loop-post');
+    ->get_template_part( $rp_post_loop );
 ?>
 
 <?php endwhile; ?>

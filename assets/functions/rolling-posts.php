@@ -27,6 +27,10 @@ function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
 	$data['the_post_type'] = $attributes['thePostType'];
 	}
 
+	if ( isset( $attributes['theCustomTemplate'] ) ) {
+	$data['the_post_loop'] = $attributes['theCustomTemplate'];
+	}
+
 		ob_start();
 
 		$templates = new WPProz_Guten_Blocks_Template_Loader;
@@ -34,7 +38,6 @@ function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
 				->set_template_data($data, 'guten_blocks')
 				->get_template_part('rolling-posts/loop');
 
-	 	//include( plugin_dir_path( __FILE__ ) . '../includes/rolling-posts.php');
 		$output = ob_get_clean();
 
 	 	return $output;

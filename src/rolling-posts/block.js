@@ -84,6 +84,10 @@ registerBlockType( 'wpproz/rolling-posts', {
       type: 'string',
     },
 
+    theCustomTemplate: {
+      type: 'string',
+    },
+
     block_style_one: {
       selector: 'div',
       source: 'attribute',
@@ -118,6 +122,12 @@ registerBlockType( 'wpproz/rolling-posts', {
       });
     };
 
+    const onChangeTheCustomTemplate = value => {
+      props.setAttributes({
+        theCustomTemplate: value
+      });
+    };
+
 
 		return [
 
@@ -149,6 +159,13 @@ registerBlockType( 'wpproz/rolling-posts', {
       label={ __( 'Post Type' ) }
       value={ props.attributes.thePostType }
       onChange={ onChangeThePostType }
+      help={ __( '' ) }
+      />
+
+      <TextControl
+      label={ __( 'Custom Template' ) }
+      value={ props.attributes.theCustomTemplate }
+      onChange={ onChangeTheCustomTemplate }
       help={ __( '' ) }
       />
 
@@ -188,7 +205,8 @@ registerBlockType( 'wpproz/rolling-posts', {
 			attributes: {
         align,
         verticalPadding,
-        thePostType
+        thePostType,
+        theCustomTemplate
 			}
 		} = props;
 
