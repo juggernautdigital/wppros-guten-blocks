@@ -1,6 +1,14 @@
 <?php $classes = $guten_blocks->class_names; ?>
-<?php $the_post_type = $guten_blocks->the_post_type; ?>
-<?php $the_post_loop = $guten_blocks->the_post_loop; ?>
+<?php
+if(isset($guten_blocks->the_post_type)) {
+  $the_post_type = $guten_blocks->the_post_type;
+}
+?>
+<?php
+if(isset($guten_blocks->the_post_loop)) {
+  $the_post_loop = $guten_blocks->the_post_loop;
+}
+?>
 
 <section class="blog-wrapper blog-snippet <?php echo $classes ?>">
 
@@ -21,14 +29,12 @@ if(empty($the_post_loop)){
 ?>
 
   <div class="wrapper container-fluid">
+
+    <?php echo $guten_blocks->rp_content; ?>
+
   <div class="row">
 
-
-
     <div class="col-xs-12">
-
-  <div class="pb-10">
-
 
 <?php
 $args = array(
@@ -51,6 +57,8 @@ $templates
 
 <?php endwhile; ?>
 </div>
+
+
 <div class="row">
   <div class="col-xs-12">
 <div class="pagination">
@@ -64,11 +72,13 @@ $templates
 </div>
 </div>
 </div>
+
+
 <?php endif; ?>
 
 
 
-  </div>
+
 
 
     </div>

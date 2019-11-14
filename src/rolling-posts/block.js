@@ -29,14 +29,14 @@ const {
 	MediaUploadCheck,
 	withColors,
 	ColorPalette,
-	getColorClassName
+	getColorClassName,
+  InnerBlocks
 } = wp.editor;
 
 const {
 	InspectorControls,
 	RichText,
 	BlockControls,
-	InnerBlocks,
 	MediaUpload,
 	PanelColorSettings,
 } = wp.blockEditor;
@@ -59,6 +59,8 @@ const {
 	Path,
 	SVG
 } = wp.components;
+
+const TEMPLATE = [ [ 'core/heading', { placeholder: 'Enter a call to action title here...'} ], [ 'core/paragraph', { placeholder: 'Enter your content here for your call to action...' } ] ];
 
 registerBlockType( 'wpproz/rolling-posts', {
 
@@ -176,6 +178,11 @@ registerBlockType( 'wpproz/rolling-posts', {
       <div className={ className + vertical_padding }>
         <div class="wrapper container-fluid">
           <div class="row">
+
+<div class="col-xs-12 col-sm-12">
+<InnerBlocks />
+</div>
+
             <div class="col-xs-12 col-sm-12 col-md-4">
               <div class="blog-item">
                 <p>Your post will be displayed here</p>
@@ -203,6 +210,7 @@ registerBlockType( 'wpproz/rolling-posts', {
 		const {
 			className,
 			attributes: {
+        content,
         align,
         verticalPadding,
         thePostType,
@@ -211,7 +219,7 @@ registerBlockType( 'wpproz/rolling-posts', {
 		} = props;
 
 		return (
-      null
+      <InnerBlocks.Content />
     );
 
 	},

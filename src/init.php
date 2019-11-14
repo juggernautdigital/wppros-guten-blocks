@@ -40,14 +40,14 @@ function wpproz_blocks_editor_includes() {
     wp_enqueue_script(
         'wpproz-blocks',
         plugins_url( '../dist/blocks.build.js', __FILE__ ),
-        [ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-plugins', 'wp-edit-post' ]
+        [ 'wp-editor', 'wp-element', 'wp-editor', 'wp-plugins', 'wp-edit-post' ]
     );
 
 		// Enqueue block editor styles
     wp_enqueue_style(
         'wpproz-blocks-editor-css',
         plugins_url( '../dist/blocks.editor.build.css', __FILE__ ),
-        [ 'wp-blocks', 'wp-edit-blocks' ]
+        [ 'wp-editor', 'wp-edit-blocks' ]
     );
 
 		// Enqueue block editor styles
@@ -98,7 +98,7 @@ function wpproz_blocks_includes() {
     wp_enqueue_style(
         'wpproz-blocks-css',
         plugins_url( '../dist/blocks.style.build.css', __FILE__ ),
-        [ 'wp-blocks' ]
+        [ 'wp-editor' ]
         //filemtime( plugin_dir_path( __FILE__ ) . 'dist/blocks.style.build.css' )
     );
 

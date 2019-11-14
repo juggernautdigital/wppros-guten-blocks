@@ -17,6 +17,8 @@ function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
 
 	$data = array();
 
+	$data['rp_content'] = $content;
+
 	$data['class_names'] = $class;
 
 	if ( isset( $attributes['verticalPadding'] ) ) {
