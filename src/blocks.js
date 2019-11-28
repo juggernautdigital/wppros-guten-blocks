@@ -14,3 +14,4 @@ import './information-boxes/block.js';
 import './call-to-action/block.js';
 import './google-map/block.js';
 import './rolling-posts/block.js';
+import './template-block/block.js';

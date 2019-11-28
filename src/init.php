@@ -168,6 +168,7 @@ function wpproz_register_block_types() {
 		'call-to-action.php'           	=> 'wpproz/call-to-action',
 		'google-map.php'           			=> 'wpproz/google-map',
 		'rolling-posts.php'           	=> 'wpproz/rolling-posts',
+		'template-block.php'           	=> 'wpproz/template-block',
 	);
 
 	foreach ( $block_names as $file => $block_name ) {
