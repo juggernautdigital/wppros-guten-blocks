@@ -22,10 +22,8 @@ if(isset($guten_blocks->featured_meta_name)) {
   $featured_meta_name = $guten_blocks->featured_meta_name;
 };
 if(empty($the_custom_post_template)){
-  echo 'plugin';
   $rp_post_template = 'rolling-posts/loop-post';
 } else {
-  echo 'theme';
   $rp_post_template = 'rolling-posts/loop-post-' . $the_custom_post_template;
 };
 ?>
