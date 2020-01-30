@@ -86,9 +86,36 @@ registerBlockType( 'wpproz/rolling-posts', {
       type: 'string',
     },
 
-    theCustomTemplate: {
+    theCustomLoopTemplate: {
       type: 'string',
     },
+
+    theCustomPostTemplate: {
+      type: 'string',
+    },
+
+    //
+    postsPerPage: {
+      type: 'number',
+    },
+
+    showFeaturedOnly: {
+      type: 'boolean',
+      default: false
+    },
+
+    featuredMetaName: {
+      type: 'string',
+    },
+
+    theTaxonomy: {
+      type: 'string',
+    },
+
+    theTerm: {
+      type: 'string',
+    },
+    //
 
     block_style_one: {
       selector: 'div',
@@ -104,7 +131,8 @@ registerBlockType( 'wpproz/rolling-posts', {
 			attributes: {
 				align,
         verticalPadding,
-        thePostType
+        thePostType,
+        showFeaturedOnly
 			},
 			className,
 			setAttributes
@@ -124,12 +152,42 @@ registerBlockType( 'wpproz/rolling-posts', {
       });
     };
 
-    const onChangeTheCustomTemplate = value => {
+    const onChangeTheCustomPostTemplate = value => {
       props.setAttributes({
-        theCustomTemplate: value
+        theCustomPostTemplate: value
       });
     };
 
+    const onChangeTheCustomLoopTemplate = value => {
+      props.setAttributes({
+        theCustomLoopTemplate: value
+      });
+    };
+
+    const onChangePostsPerPage = value => {
+      props.setAttributes({
+        postsPerPage: value
+      });
+    };
+    const onChangeTheTaxonomy = value => {
+      props.setAttributes({
+        theTaxonomy: value
+      });
+    };
+    const onChangeTheTerm = value => {
+      props.setAttributes({
+        theTerm: value
+      });
+    };
+    const onChangeFeaturedMetaName = value => {
+      props.setAttributes({
+        featuredMetaName: value
+      });
+    };
+
+    const onChangeShowFeaturedOnly = newURL => {
+      setAttributes( { showFeaturedOnly: newURL } );
+    };
 
 		return [
 
@@ -137,7 +195,7 @@ registerBlockType( 'wpproz/rolling-posts', {
 
       <PanelBody
       title="Block Styling"
-      initialOpen={ true }
+      initialOpen={ false }
       >
 
       <RangeControl
@@ -148,6 +206,27 @@ registerBlockType( 'wpproz/rolling-posts', {
       min={ 0 }
       max={ 15 }
       help={ __( '' ) }
+      />
+
+      </PanelBody>
+
+      <PanelBody
+      title="Custom Templates"
+      initialOpen={ false }
+      >
+
+      <TextControl
+      label={ __( 'Custom Loop Template' ) }
+      value={ props.attributes.theCustomLoopTemplate }
+      onChange={ onChangeTheCustomLoopTemplate }
+      help={ __( 'Contains the wrapper template and query args.' ) }
+      />
+
+      <TextControl
+      label={ __( 'Custom Post Template' ) }
+      value={ props.attributes.theCustomPostTemplate }
+      onChange={ onChangeTheCustomPostTemplate }
+      help={ __( 'Contains the single post item template' ) }
       />
 
       </PanelBody>
@@ -165,10 +244,37 @@ registerBlockType( 'wpproz/rolling-posts', {
       />
 
       <TextControl
-      label={ __( 'Custom Template' ) }
-      value={ props.attributes.theCustomTemplate }
-      onChange={ onChangeTheCustomTemplate }
+      label={ __( 'Posts Per Page' ) }
+      value={ props.attributes.postsPerPage }
+      onChange={ onChangePostsPerPage }
       help={ __( '' ) }
+      />
+
+      <TextControl
+      label={ __( 'Taxonomy' ) }
+      value={ props.attributes.theTaxonomy }
+      onChange={ onChangeTheTaxonomy }
+      help={ __( 'Enter the taxonomy' ) }
+      />
+
+      <TextControl
+      label={ __( 'Term' ) }
+      value={ props.attributes.theTerm }
+      onChange={ onChangeTheTerm }
+      help={ __( 'Enter the term slug.' ) }
+      />
+
+      <ToggleControl
+        label={ __('Show only featured') }
+        checked={ showFeaturedOnly }
+        onChange={ onChangeShowFeaturedOnly }
+      />
+
+      <TextControl
+      label={ __( 'Featured Meta Name' ) }
+      value={ props.attributes.featuredMetaName }
+      onChange={ onChangeFeaturedMetaName }
+      help={ __( 'Enter the meta name for the featured field' ) }
       />
 
       </PanelBody>
@@ -179,9 +285,9 @@ registerBlockType( 'wpproz/rolling-posts', {
         <div class="wrapper container-fluid">
           <div class="row">
 
-<div class="col-xs-12 col-sm-12">
-<InnerBlocks />
-</div>
+            <div class="col-xs-12 col-sm-12">
+            <InnerBlocks />
+            </div>
 
             <div class="col-xs-12 col-sm-12 col-md-4">
               <div class="blog-item">
@@ -214,7 +320,13 @@ registerBlockType( 'wpproz/rolling-posts', {
         align,
         verticalPadding,
         thePostType,
-        theCustomTemplate
+        theCustomLoopTemplate,
+        theCustomPostTemplate,
+        postsPerPage,
+        showFeaturedOnly,
+        theTaxonomy,
+        theTerm,
+        featuredMetaName
 			}
 		} = props;
 

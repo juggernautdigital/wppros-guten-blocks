@@ -29,8 +29,38 @@ function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
 	$data['the_post_type'] = $attributes['thePostType'];
 	}
 
-	if ( isset( $attributes['theCustomTemplate'] ) ) {
-	$data['the_post_loop'] = $attributes['theCustomTemplate'];
+	if ( isset( $attributes['postsPerPage'] ) ) {
+	$data['posts_per_page'] = $attributes['postsPerPage'];
+	}
+
+	if ( isset( $attributes['theCustomLoopTemplate'] ) ) {
+	$the_custom_loop_template = $attributes['theCustomLoopTemplate'];
+	}
+
+	if(empty($the_custom_loop_template)){
+		$rp_loop_template = 'rolling-posts/loop-wrapper';
+	} else {
+		$rp_loop_template = 'rolling-posts/loop-wrapper-' . $the_custom_loop_template;
+	}
+
+	if ( isset( $attributes['theCustomPostTemplate'] ) ) {
+	$data['the_custom_post_template'] = $attributes['theCustomPostTemplate'];
+	}
+
+	if ( isset( $attributes['theTaxonomy'] ) ) {
+	$data['the_taxonomy'] = $attributes['theTaxonomy'];
+	}
+
+	if ( isset( $attributes['theTerm'] ) ) {
+	$data['the_term'] = $attributes['theTerm'];
+	}
+
+	if ( isset( $attributes['showFeaturedOnly'] ) ) {
+	$data['show_featured_only'] = $attributes['showFeaturedOnly'];
+	}
+
+	if ( isset( $attributes['featuredMetaName'] ) ) {
+	$data['featured_meta_name'] = $attributes['featuredMetaName'];
 	}
 
 		ob_start();
@@ -38,7 +68,7 @@ function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
 		$templates = new WPProz_Guten_Blocks_Template_Loader;
 		$templates
 				->set_template_data($data, 'guten_blocks')
-				->get_template_part('rolling-posts/loop');
+				->get_template_part( $rp_loop_template );
 
 		$output = ob_get_clean();
 
