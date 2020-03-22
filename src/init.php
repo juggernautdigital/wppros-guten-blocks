@@ -44,6 +44,11 @@ function wpproz_blocks_editor_includes() {
     );
 
 		// Enqueue block editor styles
+		wp_enqueue_script(
+				'fontawesome', 'https://kit.fontawesome.com/aa4cc95836.js'
+		);
+
+		// Enqueue block editor styles
     wp_enqueue_style(
         'wpproz-blocks-editor-css',
         plugins_url( '../dist/blocks.editor.build.css', __FILE__ ),
@@ -60,21 +65,6 @@ function wpproz_blocks_editor_includes() {
 		wp_enqueue_style(
 				'fontawesome',
 				plugins_url( '../assets/plugins/FontAwesome/css/all.min.css', __FILE__ )
-		);
-
-		// Enqueue block editor styles
-		wp_enqueue_script(
-				'slick-slider-core',
-				plugins_url( '../assets/plugins/Slick/slick.min.js', __FILE__ ),
-				[ 'jquery' ]
-		);
-		wp_enqueue_style(
-				'slick-slider-core',
-				plugins_url( '../assets/plugins/Slick/slick.min.css', __FILE__ )
-		);
-		wp_enqueue_style(
-				'slick-slider-core-theme',
-				plugins_url( '../assets/plugins/Slick/slick-theme.min.css', __FILE__ )
 		);
 
 		// Enqueue block editor styles
@@ -101,24 +91,8 @@ function wpproz_blocks_includes() {
     );
 
 		// Enqueue block editor styles
-		wp_enqueue_style(
-				'fontawesome',
-				plugins_url( '../assets/plugins/FontAwesome/css/all.min.css', __FILE__ )
-		);
-
-		// Enqueue block editor styles
 		wp_enqueue_script(
-				'slick-slider-core',
-				plugins_url( '../assets/plugins/Slick/slick.min.js', __FILE__ ),
-				[ 'jquery' ]
-		);
-		wp_enqueue_style(
-				'slick-slider-core',
-				plugins_url( '../assets/plugins/Slick/slick.min.css', __FILE__ )
-		);
-		wp_enqueue_style(
-				'slick-slider-core-theme',
-				plugins_url( '../assets/plugins/Slick/slick-theme.min.css', __FILE__ )
+				'fontawesome', 'https://kit.fontawesome.com/aa4cc95836.js'
 		);
 
 		// Enqueue block editor styles
