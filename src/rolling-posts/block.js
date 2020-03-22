@@ -94,9 +94,9 @@ registerBlockType( 'wpproz/rolling-posts', {
       type: 'string',
     },
 
-    //
     postsPerPage: {
-      type: 'number',
+      type: 'string',
+      value: 'number'
     },
 
     showFeaturedOnly: {
@@ -132,6 +132,7 @@ registerBlockType( 'wpproz/rolling-posts', {
 				align,
         verticalPadding,
         thePostType,
+        postsPerPage,
         showFeaturedOnly
 			},
 			className,
