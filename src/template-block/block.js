@@ -122,7 +122,7 @@ registerBlockType( 'wpproz/template-block', {
 
       </InspectorControls>,
 
-      <div className={ className }>
+      <div>
 
         <Placeholder
             icon="portfolio"

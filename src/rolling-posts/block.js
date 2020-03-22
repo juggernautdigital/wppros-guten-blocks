@@ -195,23 +195,6 @@ registerBlockType( 'wpproz/rolling-posts', {
 			<InspectorControls key="inspector">
 
       <PanelBody
-      title="Block Styling"
-      initialOpen={ false }
-      >
-
-      <RangeControl
-      label={ __( 'Vertical Padding' ) }
-      value={ props.attributes.verticalPadding }
-      onChange={ onChangeVerticalPadding }
-      initialPosition={ 5 }
-      min={ 0 }
-      max={ 15 }
-      help={ __( '' ) }
-      />
-
-      </PanelBody>
-
-      <PanelBody
       title="Custom Templates"
       initialOpen={ false }
       >
@@ -282,7 +265,7 @@ registerBlockType( 'wpproz/rolling-posts', {
 
       </InspectorControls>,
 
-      <div className={ className + vertical_padding }>
+      <div>
 
         <Placeholder
           label={ __('Rolling Posts') }
