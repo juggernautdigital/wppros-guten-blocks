@@ -3,7 +3,7 @@
  * Plugin Name: WP-Proz Guten Blocks
  * Plugin URI: http://www.wp-proz.com/plugins/products
  * Description: This plugin add additional blocks to the WordPress editor
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: WP-Proz
  * Author URI: http://www.wp-proz.com
  * GitHub Plugin URI: juggernautdigital/wpproz-guten-blocks
