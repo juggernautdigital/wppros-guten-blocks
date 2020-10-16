@@ -83,7 +83,6 @@ function wpproz_blocks_rolling_posts() {
 				'attributes'      => array(
 						'align'      => array(
 							'type' => 'string',
-							'default' => 'full',
 						),
 						'verticalPadding'      => array(
 							'type' => 'number',
