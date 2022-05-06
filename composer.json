@@ -1,0 +1,13 @@
+{
+    "name": "juggernautdigital/wpproz-guten-blocks",
+    "description": "",
+    "keywords": [
+      "wordpress",
+      "plugin"
+    ],
+    "homepage": "https://github.com/juggernautdigital/wpproz-guten-blocks",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">7.3"
+    }
+}
