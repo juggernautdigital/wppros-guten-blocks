@@ -1,6 +1,7 @@
 {
     "name": "juggernautdigital/wppros-guten-blocks",
     "description": "",
+    "version": "1.1.1",
     "keywords": [
       "wordpress",
       "plugin"
