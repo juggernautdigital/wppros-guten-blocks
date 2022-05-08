@@ -1,5 +1,5 @@
 /**
- * BLOCK: wpproz-munster-information-boxes
+ * BLOCK: wppros-munster-information-boxes
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -47,7 +47,7 @@ const {
 
 const ALLOWED_BLOCKS = ['core/button', 'core/paragraph', 'core/heading', 'core/list'];
 
-registerBlockType('wpproz/information-boxes', {
+registerBlockType('wppros/information-boxes', {
 
 			title: 'Information Boxes',
 			supports: {

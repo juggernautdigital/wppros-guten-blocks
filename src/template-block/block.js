@@ -1,5 +1,5 @@
 /**
- * BLOCK: wpproz-munster-information-boxes
+ * BLOCK: wppros-munster-information-boxes
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -63,7 +63,7 @@ const {
 
 const TEMPLATE = [ [ 'core/heading', { placeholder: 'Enter a call to action title here...'} ], [ 'core/paragraph', { placeholder: 'Enter your content here for your call to action...' } ] ];
 
-registerBlockType( 'wpproz/template-block', {
+registerBlockType( 'wppros/template-block', {
 
 	title: 'Template File',
 	supports: {
@@ -127,7 +127,7 @@ registerBlockType( 'wpproz/template-block', {
         <Placeholder
             icon="portfolio"
             label="Template File Block"
-            instructions="This block enables you to create and include a template file within your theme folder. Simply type the file name excluding the extension in the settings of this block and create a file in your theme folder and locate it in wpproz/guten-blocks/template-block/YOURFILENAME.php"
+            instructions="This block enables you to create and include a template file within your theme folder. Simply type the file name excluding the extension in the settings of this block and create a file in your theme folder and locate it in wppros/guten-blocks/template-block/YOURFILENAME.php"
           />
 
       </div>

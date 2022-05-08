@@ -1,7 +1,7 @@
 <?php
-function render_block_wpproz_blocks_template_block( $attributes, $content ) {
+function render_block_wppros_blocks_template_block( $attributes, $content ) {
 
-	$class = 'wp-block-wpproz-template-block';
+	$class = 'wp-block-wppros-template-block';
 
 	if (isset($attributes['className'])) {
 			$class .= ' ' . $attributes['className'];
@@ -38,9 +38,9 @@ function render_block_wpproz_blocks_template_block( $attributes, $content ) {
 
 }
 
-function wpproz_blocks_template_block() {
+function wppros_blocks_template_block() {
 
-				register_block_type( 'wpproz/template-block', array(
+				register_block_type( 'wppros/template-block', array(
 
 				'attributes'      => array(
 						'align'      => array(
@@ -50,9 +50,9 @@ function wpproz_blocks_template_block() {
 
 				),
 
-							'render_callback' => 'render_block_wpproz_blocks_template_block',
+							'render_callback' => 'render_block_wppros_blocks_template_block',
 
 				) );
 
  }
- add_action( 'init', 'wpproz_blocks_template_block', 20 );
+ add_action( 'init', 'wppros_blocks_template_block', 20 );

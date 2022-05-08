@@ -9,12 +9,12 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-wpproz-content-feature {
+.wp-block-wppros-content-feature {
   position: relative;
   /*
      ** Alternate Section
      */ }
-  .wp-block-wpproz-content-feature:before {
+  .wp-block-wppros-content-feature:before {
     content: '';
     position: absolute;
     top: 0;
@@ -25,7 +25,7 @@
     background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
     background: -o-linear-gradient(315deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
     background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); }
-  .wp-block-wpproz-content-feature .photo-credit {
+  .wp-block-wppros-content-feature .photo-credit {
     display: none;
     position: absolute;
     top: 9rem;
@@ -35,47 +35,47 @@
     text-align: right;
     z-index: 10; }
     @media (min-width: 48em) {
-      .wp-block-wpproz-content-feature .photo-credit {
+      .wp-block-wppros-content-feature .photo-credit {
         display: block; } }
-    .wp-block-wpproz-content-feature .photo-credit span {
+    .wp-block-wppros-content-feature .photo-credit span {
       display: block;
       color: #fff;
       font-size: 12px; }
-      .wp-block-wpproz-content-feature .photo-credit span:first-child {
+      .wp-block-wppros-content-feature .photo-credit span:first-child {
         font-weight: 700; }
-  .wp-block-wpproz-content-feature .panel {
+  .wp-block-wppros-content-feature .panel {
     position: relative;
     width: 100%;
     background-color: #3e87d2;
     text-align: center;
     color: #fff; }
     @media (min-width: 48em) {
-      .wp-block-wpproz-content-feature .panel {
+      .wp-block-wppros-content-feature .panel {
         width: 50%; } }
-    .wp-block-wpproz-content-feature .panel .inner-panel {
+    .wp-block-wppros-content-feature .panel .inner-panel {
       padding: 60px 30px 0; }
       @media (min-width: 48em) {
-        .wp-block-wpproz-content-feature .panel .inner-panel {
+        .wp-block-wppros-content-feature .panel .inner-panel {
           padding: 60px 45px; } }
-      .wp-block-wpproz-content-feature .panel .inner-panel img {
+      .wp-block-wppros-content-feature .panel .inner-panel img {
         width: 45%;
         height: auto; }
-      .wp-block-wpproz-content-feature .panel .inner-panel button.image-button {
+      .wp-block-wppros-content-feature .panel .inner-panel button.image-button {
         width: 100%;
         text-align: center;
         display: block; }
-      .wp-block-wpproz-content-feature .panel .inner-panel p {
+      .wp-block-wppros-content-feature .panel .inner-panel p {
         margin-bottom: 30px; }
-      .wp-block-wpproz-content-feature .panel .inner-panel div.panel-button {
+      .wp-block-wppros-content-feature .panel .inner-panel div.panel-button {
         background-color: #fff;
         border-radius: 50px;
         padding: 15px 25px;
         display: inline-block;
         font-weight: 700;
         text-transform: uppercase; }
-        .wp-block-wpproz-content-feature .panel .inner-panel div.panel-button a {
+        .wp-block-wppros-content-feature .panel .inner-panel div.panel-button a {
           color: inherit; }
-    .wp-block-wpproz-content-feature .panel .panel-bullets {
+    .wp-block-wppros-content-feature .panel .panel-bullets {
       position: relative;
       width: 100%;
       -webkit-box-sizing: border-box;
@@ -83,13 +83,13 @@
       text-align: left;
       padding: 0 !important; }
       @media (min-width: 48em) {
-        .wp-block-wpproz-content-feature .panel .panel-bullets {
+        .wp-block-wppros-content-feature .panel .panel-bullets {
           position: absolute;
           top: 50%;
           -webkit-transform: translate(100%, -50%) !important;
           -ms-transform: translate(100%, -50%) !important;
           transform: translate(100%, -50%) !important; } }
-      .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel {
+      .wp-block-wppros-content-feature .panel .panel-bullets .inner-bullets-panel {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -98,35 +98,35 @@
         z-index: 1;
         opacity: 0.7;
         padding: 0 !important; }
-      .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content {
+      .wp-block-wppros-content-feature .panel .panel-bullets .inner-bullets-panel-content {
         position: relative;
         z-index: 2;
         padding: 30px; }
         @media (min-width: 48em) {
-          .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content {
+          .wp-block-wppros-content-feature .panel .panel-bullets .inner-bullets-panel-content {
             padding: 45px; } }
-        .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content ul {
+        .wp-block-wppros-content-feature .panel .panel-bullets .inner-bullets-panel-content ul {
           margin: 0 !important;
           padding: 0 !important; }
-          .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content ul li {
+          .wp-block-wppros-content-feature .panel .panel-bullets .inner-bullets-panel-content ul li {
             margin-bottom: 10px;
             list-style: none; }
-            .wp-block-wpproz-content-feature .panel .panel-bullets .inner-bullets-panel-content ul li:before {
+            .wp-block-wppros-content-feature .panel .panel-bullets .inner-bullets-panel-content ul li:before {
               content: '\f054';
               font-family: 'Font Awesome 5 Pro';
               font-weight: 400;
               margin-right: 7px; }
-      .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more {
+      .wp-block-wppros-content-feature .panel .panel-bullets .find-out-more {
         position: relative;
         z-index: 2;
         padding: 0 30px 30px; }
         @media (min-width: 48em) {
-          .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more {
+          .wp-block-wppros-content-feature .panel .panel-bullets .find-out-more {
             padding: 0 45px 45px; } }
-        .wp-block-wpproz-content-feature .panel .panel-bullets .find-out-more a {
+        .wp-block-wppros-content-feature .panel .panel-bullets .find-out-more a {
           color: #fff;
           font-weight: 400; }
-  .wp-block-wpproz-content-feature .quote {
+  .wp-block-wppros-content-feature .quote {
     display: none;
     position: absolute;
     bottom: 9rem;
@@ -136,24 +136,24 @@
     color: #fff;
     font-weight: 400; }
     @media (min-width: 48em) {
-      .wp-block-wpproz-content-feature .quote {
+      .wp-block-wppros-content-feature .quote {
         display: block; } }
-    .wp-block-wpproz-content-feature .quote span {
+    .wp-block-wppros-content-feature .quote span {
       display: block;
       width: 100%; }
-  .wp-block-wpproz-content-feature.content-right .photo-credit {
+  .wp-block-wppros-content-feature.content-right .photo-credit {
     right: auto !important;
     left: 0 !important;
     padding: 15px 25px 15px 50px !important;
     text-align: left !important; }
   @media (min-width: 48em) {
-    .wp-block-wpproz-content-feature.content-right .panel {
+    .wp-block-wppros-content-feature.content-right .panel {
       right: -50% !important; }
-      .wp-block-wpproz-content-feature.content-right .panel .panel-bullets {
+      .wp-block-wppros-content-feature.content-right .panel .panel-bullets {
         -webkit-transform: translate(-100%, -50%) !important;
         -ms-transform: translate(-100%, -50%) !important;
         transform: translate(-100%, -50%) !important; } }
-  .wp-block-wpproz-content-feature.content-right .quote {
+  .wp-block-wppros-content-feature.content-right .quote {
     right: auto !important;
     left: 0 !important;
     text-align: left !important; }
@@ -168,13 +168,13 @@
  *
  * CSS for both Frontend+Backend.
  */
-.wp-block-wpproz-information-boxes h2 {
+.wp-block-wppros-information-boxes h2 {
   margin-bottom: 15px; }
 
-.wp-block-wpproz-information-boxes p {
+.wp-block-wppros-information-boxes p {
   margin: 0; }
 
-.wp-block-wpproz-information-boxes .btn {
+.wp-block-wppros-information-boxes .btn {
   background-color: #d51e41;
   padding: 15px 40px;
   border-radius: 50px;
@@ -184,11 +184,11 @@
   color: #fff;
   font-weight: 700; }
 
-.wp-block-wpproz-information-boxes .outline-boxes .wp-block-column {
+.wp-block-wppros-information-boxes .outline-boxes .wp-block-column {
   border-radius: 0 40px 0 0;
   border: 1px solid #d51e41;
   padding: 30px; }
-  .wp-block-wpproz-information-boxes .outline-boxes .wp-block-column h2, .wp-block-wpproz-information-boxes .outline-boxes .wp-block-column h3, .wp-block-wpproz-information-boxes .outline-boxes .wp-block-column h4 {
+  .wp-block-wppros-information-boxes .outline-boxes .wp-block-column h2, .wp-block-wppros-information-boxes .outline-boxes .wp-block-column h3, .wp-block-wppros-information-boxes .outline-boxes .wp-block-column h4 {
     margin-top: 0;
     font-weight: 700; }
 /**
@@ -212,9 +212,9 @@
 .wp-block-group.button-group-center .wp-block-button:last-child {
   margin-right: 0; }
 
-.wp-block-wpproz-call-to-action {
+.wp-block-wppros-call-to-action {
   position: relative; }
-  .wp-block-wpproz-call-to-action .background-image {
+  .wp-block-wppros-call-to-action .background-image {
     display: none;
     position: absolute;
     top: 0;
@@ -224,7 +224,7 @@
     background-size: cover;
     background-position: center;
     z-index: 1; }
-  .wp-block-wpproz-call-to-action .background-image-overlay {
+  .wp-block-wppros-call-to-action .background-image-overlay {
     display: none;
     position: absolute;
     top: 0;
@@ -233,10 +233,10 @@
     width: 40%;
     z-index: 2; }
   @media only screen and (min-width: 62em) {
-    .wp-block-wpproz-call-to-action .background-image,
-    .wp-block-wpproz-call-to-action .background-image-overlay {
+    .wp-block-wppros-call-to-action .background-image,
+    .wp-block-wppros-call-to-action .background-image-overlay {
       display: block; } }
-  .wp-block-wpproz-call-to-action .content {
+  .wp-block-wppros-call-to-action .content {
     position: relative;
     z-index: 3; }
 /**

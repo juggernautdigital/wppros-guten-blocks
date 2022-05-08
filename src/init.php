@@ -34,11 +34,11 @@ add_filter( 'block_categories', 'wp_proz_block_category', 10, 2);
  *
 */
 
-function wpproz_blocks_editor_includes() {
+function wppros_blocks_editor_includes() {
 
     // Enqueue block editor JS
     wp_enqueue_script(
-        'wpproz-blocks',
+        'wppros-blocks',
         plugins_url( '../dist/blocks.build.js', __FILE__ ),
         [ 'wp-editor', 'wp-element', 'wp-plugins', 'wp-edit-post' ]
     );
@@ -50,14 +50,14 @@ function wpproz_blocks_editor_includes() {
 
 		// Enqueue block editor styles
     wp_enqueue_style(
-        'wpproz-blocks-editor-css',
+        'wppros-blocks-editor-css',
         plugins_url( '../dist/blocks.editor.build.css', __FILE__ ),
         [ 'wp-editor', 'wp-edit-blocks' ]
     );
 
 		// Enqueue block editor styles
 		wp_enqueue_style(
-				'wpproz-blocks-global-css',
+				'wppros-blocks-global-css',
 				plugins_url( '../assets/css/global.min.css', __FILE__ )
 		);
 
@@ -69,7 +69,7 @@ function wpproz_blocks_editor_includes() {
 
 		// Enqueue block editor styles
 		wp_enqueue_script(
-				'wpproz-scripts',
+				'wppros-scripts',
 				plugins_url( '../assets/js/wp-proz-scripts.min.js', __FILE__ ),
 				[ 'jquery', 'slick-slider-core' ]
 		);
@@ -77,16 +77,16 @@ function wpproz_blocks_editor_includes() {
 }
 
 // Hook the enqueue functions into the editor
-add_action( 'enqueue_block_editor_assets', 'wpproz_blocks_editor_includes' );
+add_action( 'enqueue_block_editor_assets', 'wppros_blocks_editor_includes' );
 
 /**
  * Enqueue
  */
-function wpproz_blocks_includes() {
+function wppros_blocks_includes() {
 
     // Enqueue block editor styles
     wp_enqueue_style(
-        'wpproz-blocks-css',
+        'wppros-blocks-css',
         plugins_url( '../dist/blocks.style.build.css', __FILE__ )
     );
 
@@ -97,15 +97,15 @@ function wpproz_blocks_includes() {
 
 		// Enqueue block editor styles
 		wp_enqueue_script(
-				'wpproz-scripts',
+				'wppros-scripts',
 				plugins_url( '../assets/js/wp-proz-scripts.min.js', __FILE__ ),
 				[ 'jquery', 'slick-slider-core' ]
 		);
 
 		if (function_exists('add_google_map_api')) {
-			if(has_block('wpproz/google-map')){
+			if(has_block('wppros/google-map')){
         wp_enqueue_script(
-        'wpproz-google-api',
+        'wppros-google-api',
         'https://maps.googleapis.com/maps/api/js?key=' . add_google_map_api() . '&callback=initMap',
         array( 'jquery' ), false, true
         );
@@ -115,7 +115,7 @@ function wpproz_blocks_includes() {
 }
 
 // Hook the enqueue functions into the frontend and editor
-add_action( 'enqueue_block_assets', 'wpproz_blocks_includes' );
+add_action( 'enqueue_block_assets', 'wppros_blocks_includes' );
 
 /**
  * Block registration functions.
@@ -127,7 +127,7 @@ add_action( 'enqueue_block_assets', 'wpproz_blocks_includes' );
  * Substitutes the implementation of a core-registered block type, if exists,
  * with the built result from the plugin.
  */
-function wpproz_register_block_types() {
+function wppros_register_block_types() {
 	// Blocks directory may not exist if working from a fresh clone.
 	$blocks_dir = dirname( __FILE__ ) . '/../assets/functions/';
 	if ( ! file_exists( $blocks_dir ) ) {
@@ -135,12 +135,12 @@ function wpproz_register_block_types() {
 	}
 
 	$block_names = array(
-		'content-feature.php'        		=> 'wpproz/content-feature',
-		'information-boxes.php'         => 'wpproz/information-boxes',
-		'call-to-action.php'           	=> 'wpproz/call-to-action',
-		'google-map.php'           			=> 'wpproz/google-map',
-		'rolling-posts.php'           	=> 'wpproz/rolling-posts',
-		'template-block.php'           	=> 'wpproz/template-block',
+		'content-feature.php'        		=> 'wppros/content-feature',
+		'information-boxes.php'         => 'wppros/information-boxes',
+		'call-to-action.php'           	=> 'wppros/call-to-action',
+		'google-map.php'           			=> 'wppros/google-map',
+		'rolling-posts.php'           	=> 'wppros/rolling-posts',
+		'template-block.php'           	=> 'wppros/template-block',
 	);
 
 	foreach ( $block_names as $file => $block_name ) {
@@ -151,4 +151,4 @@ function wpproz_register_block_types() {
 		require $blocks_dir . $file;
 	}
 }
-add_action( 'init', 'wpproz_register_block_types' );
+add_action( 'init', 'wppros_register_block_types' );

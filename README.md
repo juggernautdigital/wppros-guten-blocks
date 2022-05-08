@@ -1,1 +1,1 @@
-# wpproz-guten-blocks
+# wppros-guten-blocks

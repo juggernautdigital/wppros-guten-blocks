@@ -1,5 +1,5 @@
 /**
- * BLOCK: wpproz-munster-information-boxes
+ * BLOCK: wppros-munster-information-boxes
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -60,7 +60,7 @@ const {
 	SVG
 } = wp.components;
 
-registerBlockType( 'wpproz/google-map', {
+registerBlockType( 'wppros/google-map', {
 
 	title: 'Google Map',
 	supports: {

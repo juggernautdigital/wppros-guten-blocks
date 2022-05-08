@@ -1,5 +1,5 @@
 /**
- * BLOCK: wpproz-munster-information-boxes
+ * BLOCK: wppros-munster-information-boxes
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -104,7 +104,7 @@ function convertHex(hex,opacity){
     }
 }
 
-registerBlockType('wpproz/call-to-action', {
+registerBlockType('wppros/call-to-action', {
 
 			title: 'Call to Action',
 			supports: {

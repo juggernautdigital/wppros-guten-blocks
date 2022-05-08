@@ -1,7 +1,7 @@
 <?php
-function render_block_wpproz_blocks_google_map( $attributes, $content ) {
+function render_block_wppros_blocks_google_map( $attributes, $content ) {
 
-	$class = 'wp-block-wpproz-google-map';
+	$class = 'wp-block-wppros-google-map';
 
 	if ( isset( $attributes['align'] ) ) {
 	$class .= ' align' . $attributes['align'];
@@ -52,9 +52,9 @@ function render_block_wpproz_blocks_google_map( $attributes, $content ) {
 }
 
 
-function wpproz_blocks_google_map() {
+function wppros_blocks_google_map() {
 
-				register_block_type( 'wpproz/google-map', array(
+				register_block_type( 'wppros/google-map', array(
 
 				'attributes'      => array(
 						'align'      => array(
@@ -67,9 +67,9 @@ function wpproz_blocks_google_map() {
 
 				),
 
-							'render_callback' => 'render_block_wpproz_blocks_google_map',
+							'render_callback' => 'render_block_wppros_blocks_google_map',
 
 				) );
 
  }
- add_action( 'init', 'wpproz_blocks_google_map', 20 );
+ add_action( 'init', 'wppros_blocks_google_map', 20 );

@@ -1,7 +1,7 @@
 <?php
-function render_block_wpproz_blocks_carousel( $attributes, $content ) {
+function render_block_wppros_blocks_carousel( $attributes, $content ) {
 
-	$class = 'wp-block-wpproz-carousel';
+	$class = 'wp-block-wppros-carousel';
 	if ( isset( $attributes['align'] ) ) {
 	$class .= ' align' . $attributes['align'];
 	}
@@ -19,13 +19,13 @@ function render_block_wpproz_blocks_carousel( $attributes, $content ) {
 }
 
 
-function wpproz_blocks_carousel() {
+function wppros_blocks_carousel() {
 
-				register_block_type( 'wpproz/carousel', array(
+				register_block_type( 'wppros/carousel', array(
 
-							'render_callback' => 'render_block_wpproz_blocks_carousel',
+							'render_callback' => 'render_block_wppros_blocks_carousel',
 
 				) );
 
  }
- add_action( 'init', 'wpproz_blocks_carousel', 20 );
+ add_action( 'init', 'wppros_blocks_carousel', 20 );

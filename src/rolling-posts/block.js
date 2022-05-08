@@ -1,5 +1,5 @@
 /**
- * BLOCK: wpproz-munster-information-boxes
+ * BLOCK: wppros-munster-information-boxes
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -63,7 +63,7 @@ const {
 
 const TEMPLATE = [ [ 'core/heading', { placeholder: 'Enter a call to action title here...'} ], [ 'core/paragraph', { placeholder: 'Enter your content here for your call to action...' } ] ];
 
-registerBlockType( 'wpproz/rolling-posts', {
+registerBlockType( 'wppros/rolling-posts', {
 
 	title: 'Rolling Posts',
 	supports: {

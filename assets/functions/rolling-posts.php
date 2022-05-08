@@ -1,7 +1,7 @@
 <?php
-function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
+function render_block_wppros_blocks_rolling_posts( $attributes, $content ) {
 
-	$class = 'wp-block-wpproz-rolling-posts';
+	$class = 'wp-block-wppros-rolling-posts';
 
 	if (isset($attributes['className'])) {
 			$class .= ' ' . $attributes['className'];
@@ -76,9 +76,9 @@ function render_block_wpproz_blocks_rolling_posts( $attributes, $content ) {
 
 }
 
-function wpproz_blocks_rolling_posts() {
+function wppros_blocks_rolling_posts() {
 
-				register_block_type( 'wpproz/rolling-posts', array(
+				register_block_type( 'wppros/rolling-posts', array(
 
 				'attributes'      => array(
 						'align'      => array(
@@ -93,9 +93,9 @@ function wpproz_blocks_rolling_posts() {
 
 				),
 
-							'render_callback' => 'render_block_wpproz_blocks_rolling_posts',
+							'render_callback' => 'render_block_wppros_blocks_rolling_posts',
 
 				) );
 
  }
- add_action( 'init', 'wpproz_blocks_rolling_posts', 20 );
+ add_action( 'init', 'wppros_blocks_rolling_posts', 20 );

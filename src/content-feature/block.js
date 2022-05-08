@@ -1,5 +1,5 @@
 /**
- * BLOCK: wpproz-content-feature
+ * BLOCK: wppros-content-feature
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -41,7 +41,7 @@ const {
   URLInput
 } = wp.components;
 const ALLOWED_BLOCKS = [ 'core/button', 'core/paragraph', 'core/heading', 'core/list' ];
-registerBlockType( 'wpproz/content-feature', {
+registerBlockType( 'wppros/content-feature', {
 	title: 'Content Feature',
 	supports: {
 		align: [
@@ -270,7 +270,7 @@ registerBlockType( 'wpproz/content-feature', {
             tagName="span"
             value={props.attributes.photoCredit}
             onChange={onChangePhotoCredit}
-            placeholder={ __( 'Enter name...', 'wpproz' ) }
+            placeholder={ __( 'Enter name...', 'wppros' ) }
             keepPlaceholderOnFocus={true}
           />
 				</div>
@@ -282,14 +282,14 @@ registerBlockType( 'wpproz/content-feature', {
                 tagName="span"
                 value={props.attributes.contentQuote}
                 onChange={onChangeContentQuote}
-                placeholder={ __( 'Enter quote...', 'wpproz' ) }
+                placeholder={ __( 'Enter quote...', 'wppros' ) }
                 keepPlaceholderOnFocus={true}
               />
               <RichText
                 tagName="span"
                 value={props.attributes.contentQuoteName}
                 onChange={onChangeContentQuoteName}
-                placeholder={ __( 'Enter name...', 'wpproz' ) }
+                placeholder={ __( 'Enter name...', 'wppros' ) }
                 className={'font-weight-bold'}
                 keepPlaceholderOnFocus={true}
               />
@@ -324,14 +324,14 @@ registerBlockType( 'wpproz/content-feature', {
                       tagName="h3"
                       value={props.attributes.contentTitle}
                       onChange={onChangeContentTitle}
-                      placeholder={ __( 'Enter title...', 'wpproz' ) }
+                      placeholder={ __( 'Enter title...', 'wppros' ) }
                       keepPlaceholderOnFocus={true}
                     />
                     <RichText
                       tagName="p"
                       value={props.attributes.contentDescription}
                       onChange={onChangeContentDescription}
-                      placeholder={ __( 'Enter content...', 'wpproz' ) }
+                      placeholder={ __( 'Enter content...', 'wppros' ) }
                       keepPlaceholderOnFocus={true}
                     />
 
@@ -340,7 +340,7 @@ registerBlockType( 'wpproz/content-feature', {
                         className="panel-button"
                         value={props.attributes.contentButton}
                         onChange={onChangeContentButton}
-                        placeholder={ __( 'Your button...', 'wpproz' ) }
+                        placeholder={ __( 'Your button...', 'wppros' ) }
                     />
 
 									</div>
@@ -353,7 +353,7 @@ registerBlockType( 'wpproz/content-feature', {
                         multiline="li"
                         onChange={onChangeContentFeatures}
                         value={props.attributes.contentFeatures}
-                        placeholder={ __( 'Enter features...', 'wpproz' ) }
+                        placeholder={ __( 'Enter features...', 'wppros' ) }
                         keepPlaceholderOnFocus={true}
                       />
 										</div>
@@ -363,7 +363,7 @@ registerBlockType( 'wpproz/content-feature', {
                         className="find-out-more text-center"
                         value={props.attributes.contentFeaturesButton}
                         onChange={onChangeContentFeaturesButton}
-                        placeholder={ __( 'Your button...', 'wpproz' ) }
+                        placeholder={ __( 'Your button...', 'wppros' ) }
                     />
 
 

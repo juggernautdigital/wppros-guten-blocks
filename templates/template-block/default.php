@@ -8,7 +8,7 @@
 
       <div class="col-xs-12 center-xs">
         <div class="py-10">
-                <p>This block enables you to create and include a template file within your theme folder. Simply type the file name excluding the extension in the settings of this block and create a file in your theme folder and locate it in wpproz/guten-blocks/template-block/YOURFILENAME.php</p>
+                <p>This block enables you to create and include a template file within your theme folder. Simply type the file name excluding the extension in the settings of this block and create a file in your theme folder and locate it in wppros/guten-blocks/template-block/YOURFILENAME.php</p>
         </div>
       </div>
 

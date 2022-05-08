@@ -1,7 +1,7 @@
 <?php
-function render_block_wpproz_blocks_information_boxes( $attributes, $content ) {
+function render_block_wppros_blocks_information_boxes( $attributes, $content ) {
 
-	$class = 'wp-block-wpproz-information-boxes';
+	$class = 'wp-block-wppros-information-boxes';
 	if ( isset( $attributes['align'] ) ) {
 	$class .= ' align' . $attributes['align'];
 	}
@@ -59,13 +59,13 @@ function render_block_wpproz_blocks_information_boxes( $attributes, $content ) {
 }
 
 
-function wpproz_blocks_information_boxes() {
+function wppros_blocks_information_boxes() {
 
-				register_block_type( 'wpproz/information-boxes', array(
+				register_block_type( 'wppros/information-boxes', array(
 
-							//'render_callback' => 'render_block_wpproz_blocks_information_boxes',
+							//'render_callback' => 'render_block_wppros_blocks_information_boxes',
 
 				) );
 
  }
- add_action( 'init', 'wpproz_blocks_information_boxes', 20 );
+ add_action( 'init', 'wppros_blocks_information_boxes', 20 );

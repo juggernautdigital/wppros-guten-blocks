@@ -1,12 +1,12 @@
 <?php
-function render_block_wpproz_blocks_call_to_action( $attributes, $content ) {
+function render_block_wppros_blocks_call_to_action( $attributes, $content ) {
 
 	if ( isset( $attributes['mediaPosition'] ) ) {
 		$media_position = $attributes['mediaPosition'];
 		$layout_option = $media_position;
 	}
 
-	$class = 'wp-block-wpproz-call-to-action';
+	$class = 'wp-block-wppros-call-to-action';
 
 	if ( isset( $attributes['align'] ) ) {
 	$class .= ' align' . $attributes['align'];
@@ -63,9 +63,9 @@ function render_block_wpproz_blocks_call_to_action( $attributes, $content ) {
 }
 
 
-function wpproz_blocks_call_to_action() {
+function wppros_blocks_call_to_action() {
 
-				register_block_type( 'wpproz/call-to-action', array(
+				register_block_type( 'wppros/call-to-action', array(
 
 'attributes'      => array(
 	'align'      => array(
@@ -107,9 +107,9 @@ function wpproz_blocks_call_to_action() {
 
 ),
 
-							//'render_callback' => 'render_block_wpproz_blocks_call_to_action',
+							//'render_callback' => 'render_block_wppros_blocks_call_to_action',
 
 				) );
 
  }
- add_action( 'init', 'wpproz_blocks_call_to_action', 20 );
+ add_action( 'init', 'wppros_blocks_call_to_action', 20 );
