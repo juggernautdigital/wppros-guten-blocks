@@ -65,7 +65,7 @@ function render_block_wppros_blocks_rolling_posts( $attributes, $content ) {
 
 		ob_start();
 
-		$templates = new WPProz_Guten_Blocks_Template_Loader;
+		$templates = new WPPros_Guten_Blocks_Template_Loader;
 		$templates
 				->set_template_data($data, 'guten_blocks')
 				->get_template_part( $rp_loop_template );

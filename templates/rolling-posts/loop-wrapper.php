@@ -73,7 +73,7 @@ if(empty($the_custom_post_template)){
 
         <?php
         while ( $query->have_posts() ) : $query->the_post();
-        $templates = new WPProz_Guten_Blocks_Template_Loader;
+        $templates = new WPPros_Guten_Blocks_Template_Loader;
         $templates->get_template_part( $rp_post_template );
         endwhile;
         ?>
