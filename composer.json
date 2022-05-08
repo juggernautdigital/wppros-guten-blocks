@@ -1,11 +1,11 @@
 {
-    "name": "juggernautdigital/wpproz-guten-blocks",
+    "name": "juggernautdigital/wppros-guten-blocks",
     "description": "",
     "keywords": [
       "wordpress",
       "plugin"
     ],
-    "homepage": "https://github.com/juggernautdigital/wpproz-guten-blocks",
+    "homepage": "https://github.com/juggernautdigital/wppros-guten-blocks",
     "type": "wordpress-plugin",
     "require": {
         "php": ">7.3"

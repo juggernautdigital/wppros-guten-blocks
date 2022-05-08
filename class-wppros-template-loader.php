@@ -12,7 +12,7 @@
  	exit;
  }
 
-class WPProz_Guten_Blocks_Template_Loader extends Gamajo_Template_Loader {
+class WPPros_Guten_Blocks_Template_Loader extends Gamajo_Template_Loader {
 
 	/**
 	 * Prefix for filter names.
@@ -28,7 +28,7 @@ class WPProz_Guten_Blocks_Template_Loader extends Gamajo_Template_Loader {
 	 * @since 1.0.0
 	 * @type string
 	 */
-	protected $theme_template_directory = 'wpproz/guten-blocks';
+	protected $theme_template_directory = 'wppros/guten-blocks';
 
 	/**
 	 * Reference to the root directory path of this plugin.
@@ -36,6 +36,6 @@ class WPProz_Guten_Blocks_Template_Loader extends Gamajo_Template_Loader {
 	 * @since 1.0.0
 	 * @type string
 	 */
-	protected $plugin_directory = WPPROZ_GUTEN_BLOCKS_PLUGIN_DIR;
+	protected $plugin_directory = WPPROS_GUTEN_BLOCKS_PLUGIN_DIR;
 
 }
