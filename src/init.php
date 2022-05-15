@@ -24,9 +24,7 @@ function wp_proz_block_category( $categories, $post ) {
 		)
 	);
 }
-add_filter( 'block_categories', 'wp_proz_block_category', 10, 2);
-
-
+add_filter( 'block_categories_all', 'wp_proz_block_category', 10, 2);
 
 
 /**

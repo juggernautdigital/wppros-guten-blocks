@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template loader for PW Sample Plugin.
  *
